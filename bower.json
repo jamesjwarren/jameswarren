@@ -1,0 +1,10 @@
+{
+  "name": "JamesWarren-Portfolio",
+  "version": "0.0.1",
+  "devDependencies": {},
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "lodash": "~2.4.1",
+    "jquery": "~2.1.1"
+  }
+}
