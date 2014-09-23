@@ -1,5 +1,5 @@
 {
-  "name": "JamesWarrenPortfolio",
+  "name": "JamesWarren Portfolio",
   "description": "Web portfolio for James Warren",
   "version": "0.0.1",
   "homepage": "http://www.jamesjwarren.co.uk",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jamesjwarren/jamesjwarren.co.uk.git"
+    "url": "git://github.com/jamesjwarren/jameswarren.git"
   },
   "devDependencies": {
     "assemble": "^0.4.42",
