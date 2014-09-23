@@ -1,0 +1,24 @@
+//
+// Component: Jumbotron
+// --------------------------------------------------
+
+.jumbotron {
+  padding: 190px 0 150px 0;
+  background: url('../images/header1.jpg');
+  background-position: center bottom;
+  background-size: cover;
+  margin: 0;
+  h1 {
+    font-size: floor((@font-size-base * 2.2));
+    text-transform: uppercase;
+    color: @white;
+    margin-bottom: 5px;
+    em {
+      font-style: normal;
+      color: @brand-primary;
+    }
+    &.offset {
+      margin-left: -21px;
+    }
+  }
+}

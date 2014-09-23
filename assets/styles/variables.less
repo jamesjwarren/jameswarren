@@ -9,25 +9,29 @@
 
 @gray-darker:            lighten(#000, 13.5%); // #222
 @gray-dark:              lighten(#000, 20%);   // #333
-@gray:                   lighten(#000, 33.5%); // #555
-@gray-light:             lighten(#000, 46.7%); // #777
+@gray:                   rgb(153,153,153);
+@gray-light:             darken(@white, 20%); // #777
 @gray-lighter:           lighten(#000, 93.5%); // #eee
+@white:                  #e4e4e4;
 
-@brand-primary:         #428bca;
+@brand-dark:            #292f3d; //rgb(41,47,61)
+@brand-primary:         #eee021; //rgb(238,224,33)
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 
+@trans-light:           rgba(255, 255, 255, 0.2);
+@trans-dark:            rgba(0, 0, 0, 0.2);
 
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #fff;
+@body-bg:               #d8d8d8;
 //** Global text color on `<body>`.
-@text-color:            @gray-dark;
+@text-color:            #8b8b8b;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -39,8 +43,8 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-sans-serif:  'Roboto', Helvetica, Arial, sans-serif;
+@font-family-serif:       'Roboto Slab', "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
@@ -49,10 +53,10 @@
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
-@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
-@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
-@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
-@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h1:            floor((@font-size-base * 1.7)); // ~24px
+@font-size-h2:            floor((@font-size-base * 1.7)); // ~24px
+@font-size-h3:            ceil((@font-size-base * 1.25)); // ~20px
+@font-size-h4:            ceil((@font-size-base * 1.14)); // ~18px
 @font-size-h5:            @font-size-base;
 @font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
 
@@ -62,8 +66,8 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    inherit;
-@headings-font-weight:    500;
+@headings-font-family:    @font-family-serif;
+@headings-font-weight:    normal;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
 
@@ -99,7 +103,7 @@
 @line-height-large:         1.33;
 @line-height-small:         1.5;
 
-@border-radius-base:        4px;
+@border-radius-base:        0px;
 @border-radius-large:       6px;
 @border-radius-small:       3px;
 
@@ -147,7 +151,7 @@
 
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
-@btn-primary-border:             darken(@btn-primary-bg, 5%);
+@btn-primary-border:             @brand-primary;
 
 @btn-success-color:              #fff;
 @btn-success-bg:                 @brand-success;
