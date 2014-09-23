@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Joanna Hobbs Design Portfolio",
+    "desc": "Joanna Hobbs is a graduate graphic designer. We collaborated to design and develop a portfolio to showcase her work.",
+    "tags": ["Development","CMS"],
+    "featured": true
+  },
+  {
+    "name": "ESC App",
+    "desc": "ESC is a digital story-telling platform that re-connects people with places and nature. Stories ... user-generated and curated through user interaction and engagement.",
+    "tags": ["UX","Development"],
+    "featured": true
+  }
+]

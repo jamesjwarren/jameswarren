@@ -1,0 +1,29 @@
+<div id="info" class="container timeline">
+  <div class="row-fluid">
+    <div class="col-sm-2 col-sm-offset-2 col-xs-3">
+      <img>
+    </div>
+    <div class="col-xs-8">
+      <h2>{{info.name}}</h2>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="row-fluid">
+    <div class="col-sm-2 col-sm-offset-2 col-xs-3 line-ident">
+      <span class="label">Professional</span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  {{#each info.professional}}
+    {{> info-item}}
+  {{/each}}
+  <div class="row-fluid">
+    <div class="col-sm-2 col-sm-offset-2 col-xs-3 line-ident">
+      <span class="label">Interests</span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  {{#each info.interests}}
+    {{> info-item}}
+  {{/each}}
+</div>

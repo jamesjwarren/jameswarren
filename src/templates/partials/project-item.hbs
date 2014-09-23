@@ -1,0 +1,16 @@
+<div class="row-fluid">
+  <div class="col-sm-5 details">
+    <h2>{{ name }}</h2>
+    <h5>
+      {{#each tags}}
+        {{this}} / 
+      {{/each}}
+    </h5>
+    <p class="hidden-xs">{{ desc }}</p>
+    <a class="btn">See Case Study</a>
+  </div>
+  <div class="col-sm-7 thumb">
+    <img src="{{ project.thumb }}">
+  </div>
+  <div class="clearfix"></div>
+</div>

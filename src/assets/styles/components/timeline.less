@@ -1,0 +1,25 @@
+.timeline {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+  &:before{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 70px;
+    left: 25.6%;
+    width: 2px;
+    background-color: @gray;
+    z-index: 0;
+  }
+  
+  .line-ident {
+    text-align: center;
+  }
+  
+  .row-fluid, .row {
+    margin-bottom: 30px;
+  }
+}

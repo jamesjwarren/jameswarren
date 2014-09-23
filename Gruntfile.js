@@ -1,125 +1,183 @@
 module.exports = function(grunt) {
+  
+  require('load-grunt-tasks')(grunt);
 
   // Project configuration.
   grunt.initConfig({
+    
     pkg: grunt.file.readJSON('package.json'),
-    uglify: {
+    
+    config: {
+      src: 'src',
+      dist: 'dist'
+    },
+    
+//    uglify: {
+//      options: {
+//        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+//      },
+//      build: {
+//        src: 'src/<%= pkg.name %>.js',
+//        dest: 'build/<%= pkg.name %>.min.js'
+//      }
+//    },
+    
+    watch: {
+      assemble: {
+        files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
+        tasks: ['assemble']
+      },
+      livereload: {
+        options: {
+          livereload: '<%= connect.options.livereload %>'
+        },
+        files: [
+          '<%= config.dist %>/{,*/}*.html',
+          '<%= config.dist %>/assets/{,*/}*.css',
+          '<%= config.dist %>/assets/{,*/}*.js',
+          '<%= config.dist %>/assets/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+        ]
+      }
+    },
+
+    connect: {
       options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        port: 9000,
+        livereload: 35729,
+        // change this to '0.0.0.0' to access the server from outside
+        hostname: 'localhost'
       },
-      build: {
-        src: 'src/<%= pkg.name %>.js',
-        dest: 'build/<%= pkg.name %>.min.js'
+      livereload: {
+        options: {
+          open: true,
+          base: [
+            '<%= config.dist %>'
+          ]
+        }
       }
     },
+    
+    assemble: {
+      pages: {
+        options: {
+          flatten: true,
+          assets: '<%= config.dist %>/assets',
+          layout: '<%= config.src %>/templates/layouts/default.hbs',
+          data: '<%= config.src %>/data/*.{json,yml}',
+          partials: '<%= config.src %>/templates/partials/*.hbs',
+          plugins: [],
+        },
+        files: {
+          '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
+        }
+      }
+    },
+    
     clean: {
-      dev: ['.tmp/public/**'],
-		  build: ['www']
+      dev: ['<%= config.dist %>/**/*.{html,xml}', '<%= config.dist %>/assets/**/*.!(jpg|svg)'],
+      prod: ['<%= config.dist %>/**/*.{html,xml}', '<%= config.dist %>/assets/']
     },
+    
     copy: {
-      dev: {
-        files: [{
-          expand: true,
-          cwd: './assets',
-          src: ['**/*.!(coffee|less)'],
-          dest: '.tmp/public'
-        }]
+      components: {
+        files: [
+          {
+            expand: true,
+            cwd: './bower_components/bootstrap/dist/js/',
+            src: ['bootstrap.min.js'],
+            dest: '<%= config.dist %>/assets/js/'
+          },
+          {
+            expand: true,
+            cwd: './bower_components/bootstrap/dist/fonts',
+            src: ['**/*.*'],
+            dest: '<%= config.dist %>/assets/fonts/'
+          }
+        ]
       },
-      build: {
+      assets: {
         files: [{
           expand: true,
-          cwd: '.tmp/public',
-          src: ['**/*'],
-          dest: 'www'
+          cwd: '<%= config.src %>/assets',
+          src: ['**/*.!(coffee|less)'],
+          dest: '<%= config.dist %>/assets/'
         }]
       }
     },
+    
     less: {
       dev: {
-        files: [{
-          expand: true,
-          cwd: 'assets/styles/',
-          src: ['importer.less'],
-          dest: '.tmp/public/styles/',
-          ext: '.css'
-        }]
-      }
-    },
-    sync: {
-      dev: {
-        files: [{
-          cwd: './assets',
-          src: ['**/*.!(coffee)'],
-          dest: '.tmp/public'
-        }]
-      }
-    },
-    watch: {
-      assets: {
-
-        // Assets to watch:
-        files: ['assets/**/*', 'pipeline.js'],
-
-        // When assets are changed:
-        tasks: ['syncAssets']
-      }
-    },
-    cssmin: {
-      dist: {
-        src: ['.tmp/public/concat/production.css'],
-        dest: '.tmp/public/min/production.min.css'
-      }
-    },
-    concat: {
-      js: {
-        src: require('./pipeline').jsFilesToInject,
-        dest: '.tmp/public/concat/production.js'
+        options: {
+          paths: ['<%= config.src %>/assets/styles','bower_components']
+        },
+        files: {
+          '<%= config.dist %>/assets/styles/theme.css': '<%= config.src %>/assets/styles/importer.less'
+        }
       },
-      css: {
-        src: require('./pipeline').cssFilesToInject,
-        dest: '.tmp/public/concat/production.css'
+      prod: {
+        options: {
+          paths: ['<%= config.src %>/assets/styles','bower_components'],
+          cleancss: true
+        },
+        files: {
+          '<%= config.dist %>/assets/styles/theme.css': '<%= config.src %>/assets/styles/importer.less'
+        }
       }
+    },
+    
+    sync: {	
+      assets: {
+        files: [{		
+          cwd: '<%= config.src %>/assets/',	
+          src: ['**/*.!(coffee|less)'],	
+          dest: '<%= config.dist %>/assets/'	
+        }]		
+      }		
     }
+    
   });
 
-  // Load the required grunt plugins
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-sync');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-concat');
+  // Load assemble
+  grunt.loadNpmTasks('assemble');
 
   // Default task(s).
-  grunt.registerTask('default', ['compileAssets', 'watch']);
+  grunt.registerTask('default', ['server']);
 
 
   grunt.registerTask('compileAssets', [
     'clean:dev',
     'less:dev',
-    'copy:dev'
+    'sync:assets'
   ]);
-
+  
+  grunt.registerTask('compileAssetsProd', [
+    'clean:prod',
+    'less:prod',
+    'copy:assets'
+  ]);
+  
+  
   grunt.registerTask('syncAssets', [
     'less:dev',
-    'sync:dev'
+    'sync:assets'
+  ]);
+  
+  grunt.registerTask('server', [
+    'build',
+    'connect:livereload',
+    'watch'
   ]);
 
   grunt.registerTask('build', [
 		'compileAssets',
-		'clean:build',
-		'copy:build'
+		'copy:components',
+    'assemble'
 	]);
-
+  
   grunt.registerTask('buildProd', [
-		'compileAssets',
-		'concat',
-		'uglify',
-		'cssmin',
-		'clean:build',
-		'copy:build'
+		'compileAssetsProd',
+		'copy:components',
+    'assemble'
 	]);
 
 };

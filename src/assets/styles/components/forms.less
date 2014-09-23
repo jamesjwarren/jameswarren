@@ -1,0 +1,24 @@
+//
+// Component: Forms
+// --------------------------------------------------
+
+form .form-control {
+  background: transparent;
+  border: 1px @white solid;
+  text-transform: uppercase;
+  outline: none;
+  color: @brand-primary;
+  .placeholder(@white);
+  box-shadow: none;
+  
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: @brand-primary;
+    color: @brand-primary;
+  }
+}
+
+textarea {
+  resize: none;
+}

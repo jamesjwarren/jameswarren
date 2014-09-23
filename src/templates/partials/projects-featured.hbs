@@ -1,0 +1,15 @@
+<div id="projects">
+  <div class="strip">
+    <h4>Recent Projects</h4>
+  </div>
+  <div class="thumb-list">
+    {{#each projects }}
+      {{#is featured true}}
+        {{> project-item }}
+      {{/is}}
+    {{/each }}
+  </div>
+  <div class="strip">
+    <a href="#"><img class="icon" width="24px" height="24px" src="{{assets}}/images/icons/plus.svg">See More Projects</a>
+  </div>
+</div>

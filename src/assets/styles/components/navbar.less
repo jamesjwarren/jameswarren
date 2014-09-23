@@ -1,0 +1,33 @@
+//
+// Component: Navbar
+// --------------------------------------------------
+
+nav.navbar {
+  background: rgba(0,0,0,0.6);
+  border: none;
+  font-size: @font-size-h5;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  
+  .navbar-nav {
+    margin-left: 65px;
+    a:link, a:visited {
+      color: @brand-primary;
+    }
+  }
+  
+  .navbar-brand {
+    color: @white;
+    font-size: @font-size-h5;
+    padding-left: 30px;
+  }
+  
+  .separator {
+    background: @white;
+    width: 5px;
+    height: 5px;
+    transform: rotate(45deg);
+    margin: 22px 10px;
+  }
+}
+
