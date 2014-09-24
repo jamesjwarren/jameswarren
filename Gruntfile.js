@@ -75,7 +75,7 @@ module.exports = function(grunt) {
     
     clean: {
       dev: ['<%= config.dist %>/**/*.{html,xml}', '<%= config.dist %>/assets/**/*.!(jpg|svg)'],
-      prod: ['<%= config.dist %>/**/*.{html,xml}', '<%= config.dist %>/assets/']
+      prod: ['<%= config.dist %>/**/*.{html,xml}', '<%= config.dist %>/assets/fonts/**/*.*', '<%= config.dist %>/assets/**/*.!(svg)']
     },
     
     copy: {
@@ -99,7 +99,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= config.src %>/assets',
-          src: ['**/*.!(coffee|less)'],
+          src: ['**/*.!(coffee|less|svg)'],
           dest: '<%= config.dist %>/assets/'
         }]
       }
@@ -129,10 +129,34 @@ module.exports = function(grunt) {
       assets: {
         files: [{		
           cwd: '<%= config.src %>/assets/',	
-          src: ['**/*.!(coffee|less)'],	
+          src: ['**/*.!(coffee|less|svg)'],	
           dest: '<%= config.dist %>/assets/'	
         }]		
       }		
+    },
+    
+    // provide optimisation for svg graphics
+    // SVG-Cleaner is still providing much better optimisation, this is not currently active
+    svgmin: {
+      options: {
+        plugins: [
+          { removeViewBox: true }, 
+          { removeUselessStrokeAndFill: false },
+          { transformsWithOnePath: true },
+          { removeRasterImages: true },
+          { removeTitle: true },
+          { transformsWithOnePath: true },
+          { sortAttrs: true }
+        ]
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.src %>/assets/images/',	
+          src: ['**/*.svg','/*.svg'],	
+          dest: '<%= config.dist %>/assets/images/'
+        }]
+      }
     }
     
   });
@@ -147,13 +171,16 @@ module.exports = function(grunt) {
   grunt.registerTask('compileAssets', [
     'clean:dev',
     'less:dev',
-    'sync:assets'
+    'sync:assets',
+    'copy:components'
   ]);
   
   grunt.registerTask('compileAssetsProd', [
     'clean:prod',
     'less:prod',
-    'copy:assets'
+//    'svgmin',
+    'copy:assets',
+    'copy:components'
   ]);
   
   
@@ -170,13 +197,11 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
 		'compileAssets',
-		'copy:components',
     'assemble'
 	]);
   
   grunt.registerTask('buildProd', [
 		'compileAssetsProd',
-		'copy:components',
     'assemble'
 	]);
 

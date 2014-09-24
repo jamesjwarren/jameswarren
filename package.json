@@ -1,5 +1,5 @@
 {
-  "name": "JamesWarren Portfolio",
+  "name": "JamesWarren-Portfolio",
   "description": "Web portfolio for James Warren",
   "version": "0.0.1",
   "homepage": "http://www.jamesjwarren.co.uk",
@@ -21,6 +21,7 @@
     "grunt-contrib-less": "^0.11.4",
     "grunt-contrib-uglify": "~0.5.0",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-svgmin": "^1.0.0",
     "grunt-sync": "^0.2.0",
     "load-grunt-tasks": "^0.6.0"
   }

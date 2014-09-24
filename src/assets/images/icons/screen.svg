@@ -121,7 +121,7 @@
 	.st112{fill-rule:evenodd;clip-rule:evenodd;stroke:#00806E;stroke-miterlimit:10;}
 	.st113{fill:none;stroke:#8B8B8B;stroke-width:2;stroke-miterlimit:10;}
 	.st114{clip-path:url(#SVGID_167_);fill:none;stroke:#FFFFFF;stroke-width:0.8182;stroke-miterlimit:10;}
-	.st115{fill:url(#SVGID_241_);}
+	.st115{fill:url(#SVGID_242_);}
 	.st116{fill-rule:evenodd;clip-rule:evenodd;fill:#EEE021;}
 	.st117{fill:none;stroke:#00806E;stroke-width:5;stroke-miterlimit:10;}
 	.st118{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#E4E4E4;stroke-miterlimit:10;}
@@ -207,7 +207,7 @@
 	.st198{clip-path:url(#SVGID_165_);}
 	.st199{clip-path:url(#SVGID_173_);}
 	.st200{clip-path:url(#SVGID_101_);fill:#E6E6E6;}
-	.st201{clip-path:url(#SVGID_243_);}
+	.st201{clip-path:url(#SVGID_244_);}
 	.st202{fill:none;stroke:#BEBEBE;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st203{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
 	.st204{fill:#00806E;}
@@ -289,22 +289,15 @@
 	.st278{fill:none;stroke:#EEE021;stroke-width:4;stroke-miterlimit:10;}
 ]]>
 </style>
-<symbol  id="Mail" viewBox="-144 -143.8 288 288">
+<symbol  id="Icon_-_Screen" viewBox="-145 -119 288 243">
 	<g>
-		<g>
-			<path class="st212" d="M72-42c0-4.4-3.6-8-8-8H-64c-4.4,0-8,3.6-8,8v83c0,4.4,3.6,8,8,8H64c4.4,0,8-3.6,8-8V-42z"/>
-		</g>
-		<polygon class="st202" points="-68.5,50 68.5,50 0,-12 		"/>
+		<path class="st111" d="M143-48c0-4.4-3.6-8-8-8h-272c-4.4,0-8,3.6-8,8v164c0,4.4,3.6,8,8,8h272c4.4,0,8-3.6,8-8V-48z"/>
 	</g>
-	<path class="st34" d="M135-99"/>
-	<path class="st34" d="M-135-99"/>
-	<g>
-		<path class="st89" d="M0,134.2c35.8,0,69.4-13.9,94.8-39.2C120.1,69.7,134,36,134,0.2s-13.9-69.4-39.2-94.8
-			c-25.3-25.3-59-39.2-94.8-39.2s-69.4,13.9-94.8,39.2c-25.3,25.3-39.2,59-39.2,94.8s13.9,69.4,39.2,94.8
-			C-69.4,120.3-35.8,134.2,0,134.2 M0,144.2c-79.5,0-144-64.5-144-144s64.5-144,144-144s144,64.5,144,144S79.5,144.2,0,144.2
-			L0,144.2z"/>
-	</g>
-	<polygon class="st155" points="-144,144 144,144 144,-143 -144,-143 	"/>
+	<path class="st89" d="M-28.1-56c0,0-1-27-18.5-45h90.4C26.3-83,25.3-56,25.3-56H-28.1z"/>
+	<path class="st256" d="M62-110.7c0-4.3-4.5-8.3-9-8.3H-55c-4.5,0-9,4-9,8.3v2.5c0,4.3,4.5,7.3,9,7.3H53c4.5,0,9-3,9-7.3V-110.7z"/>
+	<polygon class="st89" points="-126,-38 -126,106 126,106 	"/>
+	<polygon class="st256" points="126,106 126,-38 -126,-38 	"/>
+	<polygon class="st155" points="-145,124 143,124 143,-119 -145,-119 	"/>
 </symbol>
 <g id="Sketch1" class="st231">
 </g>
@@ -328,9 +321,9 @@
 	<g id="Contact_2_">
 		<g>
 			<defs>
-				<rect id="SVGID_56_" x="649" y="1053" width="1280" height="402"/>
+				<rect id="SVGID_56_" x="1010" y="2133" width="1280" height="402"/>
 			</defs>
-			<clipPath id="SVGID_3_">
+			<clipPath id="SVGID_2_">
 				<use xlink:href="#SVGID_56_"  style="overflow:visible;"/>
 			</clipPath>
 		</g>
@@ -339,7 +332,7 @@
 <g id="Interface_Mobile">
 	<g>
 		<defs>
-			<rect id="SVGID_64_" x="2735" y="1397" width="480" height="801"/>
+			<rect id="SVGID_64_" x="3096" y="2477" width="480" height="801"/>
 		</defs>
 		<clipPath id="SVGID_4_">
 			<use xlink:href="#SVGID_64_"  style="overflow:visible;"/>
@@ -354,7 +347,7 @@
 </g>
 <g id="Icons">
 	
-		<use xlink:href="#Mail"  width="288" height="288" id="XMLID_6_" x="-144" y="-143.8" transform="matrix(1 0 0 -1 144 144)" style="overflow:visible;"/>
+		<use xlink:href="#Icon_-_Screen"  width="288" height="243" id="XMLID_7_" x="-145" y="-119" transform="matrix(0.9714 0 0 -0.9714 144.5693 160.4912)" style="overflow:visible;"/>
 </g>
 <g id="Guides">
 </g>

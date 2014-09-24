@@ -289,16 +289,17 @@
 	.st278{fill:none;stroke:#EEE021;stroke-width:4;stroke-miterlimit:10;}
 ]]>
 </style>
-<symbol  id="Phone" viewBox="-144 -145 288 288">
-	<path class="st45" d="M-56.9,66.2c-26.7-21.5-21.4-69.8,16-107.4C-3.4-78.8,45.3-84.8,66.7-57.4l0.4,0.6c3.5,4.5,5.4,10,5.6,15.6
-		c0.2,5.6-39.3,24.8-42.1,22.8c-7.8-5.5-11.3-13.8-11.3-22l0-0.7c-18.1,1-33.7,16.3-38.3,20.9c-4.6,4.6-19.3,19.4-21.6,38.2
-		c0,0,0.2,0,0.2,0c8.1,0,16.1,4.4,20.8,10.7c3.4,4.5-17.9,43-21.4,43c-5.6,0-10.6-1.7-14.7-4.4L-56.9,66.2"/>
+<symbol  id="Icon_-_Screen_with_HTML" viewBox="-144 -122 288 243">
 	<g>
-		<path class="st88" d="M0,133c35.8,0,69.4-13.9,94.8-39.2C120.1,68.4,134,34.8,134-1s-13.9-69.4-39.2-94.8
-			C69.4-121.1,35.8-135,0-135s-69.4,13.9-94.8,39.2C-120.1-70.4-134-36.8-134-1s13.9,69.4,39.2,94.8C-69.4,119.1-35.8,133,0,133
-			 M0,143c-79.5,0-144-64.5-144-144S-79.5-145,0-145S144-80.5,144-1S79.5,143,0,143L0,143z"/>
+		<path class="st109" d="M144-51c0-4.4-3.6-8-8-8h-272c-4.4,0-8,3.6-8,8v164c0,4.4,3.6,8,8,8h272c4.4,0,8-3.6,8-8V-51z"/>
 	</g>
-	<polygon class="st154" points="-144,143 144,143 144,-145 -144,-145 	"/>
+	<path class="st88" d="M-27.1-59c0,0-1-27-18.5-45h90.4C27.3-86,26.3-59,26.3-59H-27.1z"/>
+	<path class="st256" d="M63-113.7c0-4.3-4.5-8.3-9-8.3H-54c-4.5,0-9,4-9,8.3v2.5c0,4.3,4.5,7.3,9,7.3H54c4.5,0,9-3,9-7.3V-113.7z"/>
+	<polygon class="st88" points="-126,-41 -126,103 126,103 126,-41 	"/>
+	<polyline class="st120" points="-45,49.5 -72,31.5 -45,12.5 	"/>
+	<polyline class="st120" points="45,12.5 72,31.5 45,49.5 	"/>
+	<line class="st120" x1="18" y1="58" x2="-18" y2="4"/>
+	<polygon class="st154" points="-144,121 144,121 144,-122 -144,-122 	"/>
 </symbol>
 <g id="Sketch1" class="st233">
 </g>
@@ -322,7 +323,7 @@
 	<g id="Contact_2_">
 		<g>
 			<defs>
-				<rect id="SVGID_56_" x="649" y="1413" width="1280" height="402"/>
+				<rect id="SVGID_56_" x="1009" y="1413" width="1280" height="402"/>
 			</defs>
 			<clipPath id="SVGID_2_">
 				<use xlink:href="#SVGID_56_"  style="overflow:visible;"/>
@@ -333,7 +334,7 @@
 <g id="Interface_Mobile">
 	<g>
 		<defs>
-			<rect id="SVGID_64_" x="2735" y="1757" width="480" height="801"/>
+			<rect id="SVGID_64_" x="3095" y="1757" width="480" height="801"/>
 		</defs>
 		<clipPath id="SVGID_4_">
 			<use xlink:href="#SVGID_64_"  style="overflow:visible;"/>
@@ -348,7 +349,7 @@
 </g>
 <g id="Icons">
 	
-		<use xlink:href="#Phone"  width="288" height="288" id="XMLID_1_" x="-144" y="-145" transform="matrix(1 0 0 -1 144 143)" style="overflow:visible;"/>
+		<use xlink:href="#Icon_-_Screen_with_HTML"  width="288" height="243" id="XMLID_4_" x="-144" y="-122" transform="matrix(1 0 0 -1 144 157)" style="overflow:visible;"/>
 </g>
 <g id="Guides">
 </g>
