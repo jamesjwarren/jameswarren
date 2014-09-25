@@ -1,8 +1,30 @@
 .label {
-  .h5;
-  border-radius: 5px;
-  border: 1px solid @gray;
-  color: @brand-dark;
-  background: @body-bg;
-  padding: 5px 12px;
+
+  display: inline-block;
+  padding: .3em .8em;
+  font-size: 75%;
+  line-height: 1;
+  color: @white;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .4em;
+  margin-right: .7em;
+  margin-bottom: .7em;
+
+  &.label-large {
+    .h5;
+    padding: 5px 12px;
+  }
+
+  &.label-dark {
+    color: @brand-dark;
+    background: @body-bg;
+    border: 1px solid @gray;
+  }
+
+  &.label-light {
+    color: @white;
+    border: 1px solid @white;
+  }
 }
