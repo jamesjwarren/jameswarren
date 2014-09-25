@@ -24,8 +24,8 @@ module.exports = function(grunt) {
     
     watch: {
       assemble: {
-        files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
-        tasks: ['assemble']
+        files: ['<%= config.src %>/{assets,content,data,templates}/{,*/}*.{md,hbs,yml,json,less,jpg}'],
+        tasks: ['syncAssets','assemble']
       },
       livereload: {
         options: {
