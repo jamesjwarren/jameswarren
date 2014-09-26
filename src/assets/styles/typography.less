@@ -1,10 +1,17 @@
 //
 // Typography
 // --------------------------------------------------
- 
+
+::selection {
+  background: @brand-primary;
+}
+
 h1 {
   margin: 0;
   color: @brand-primary;
+  a { color: inherit; }
+  a:hover { color: @brand-primary; }
+  letter-spacing: 1px;
 }
 
 h2 {
@@ -12,18 +19,34 @@ h2 {
   color: @brand-dark;
 }
 
-h4, .h4 {
+h4 {
   font-family: @font-family-sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0;
-  padding: 0;
+  padding: 15px 0;
+
+  @media screen and (min-width: 1234px) and (min-height:700px) {
+    padding: 30px 0;
+    font-size: floor((@font-size-h4 * 1.2));
+  }
 }
 
-h5, .h5 {
+h5 {
   font-family: @font-family-sans-serif;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
   margin-bottom: 12px;
+}
+
+// Links
+// --------------------------------------------------
+
+a {
+  .transition(color 0.8s);
+}
+
+a:hover {
+  text-decoration: none;
 }

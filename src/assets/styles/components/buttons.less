@@ -2,12 +2,12 @@
 // Buttons
 // --------------------------------------------------
 
-a.btn-primary, .btn-primary {
-  color: @brand-dark;
+.btn {
+  .transition(all 0.6s);
   text-transform: uppercase;
 }
 
-// Alternate buttons
-// --------------------------------------------------
-
-
+.btn-primary {
+  color: @brand-dark;
+  &:hover { color: @brand-dark; }
+}
