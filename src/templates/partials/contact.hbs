@@ -1,4 +1,4 @@
-<div id="contact">
+<section id="contact">
   <div class="contact-inner">
     <div class="container row-fluid">
       <div class="col-sm-1 col-sm-offset-1">
@@ -32,8 +32,8 @@
           <div class="clearfix"></div>
         </div>
         <div class="row-fluid details">
-          <div class="col-sm-4"><a href="mailto:{{info.email}}"><img class="icon pull-left" src="{{assets}}/images/icons/mail.svg" width="30px" height="30px"><h5>{{info.email}}</h5></a></div>
-          <div class="col-sm-3"><a href="tel:{{info.phone}}"><img class="icon pull-left" src="{{assets}}/images/icons/phone.svg" width="30px" height="30px"><h5>{{info.phone}}</h5></a></div>
+          <div class="col-sm-4"><a href="mailto:{{info.email}}"><img class="icon pull-left" src="{{assets}}/images/icons/mail.svg" width="30px" height="30px"><span class="icon-label">{{info.email}}</span></a></div>
+          <div class="col-sm-3"><a href="tel:{{info.phone}}"><img class="icon pull-left" src="{{assets}}/images/icons/phone.svg" width="30px" height="30px"><span class="icon-label">{{info.phone}}</span></a></div>
           <div class="col-sm-3">
             {{#each info.social}}
               <a href="{{this.url}}"><img class="icon social" src="assets/images/icons/{{this.icon}}" width="30px" height="30px" alt="this.alt"></a>
@@ -43,4 +43,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>
