@@ -3,31 +3,38 @@
 // --------------------------------------------------
 
 nav.navbar {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.15);
   border: none;
-  font-size: @font-size-h5;
+  font-size: @font-size-h4;
   letter-spacing: 1px;
   text-transform: uppercase;
-  
+
   .navbar-nav {
-    margin-left: 65px;
+    float: right;
+    margin-right: 65px;
+    a {
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
     a:link, a:visited {
+      color: @white;
+    }
+    a:hover {
       color: @brand-primary;
     }
   }
-  
+
   .navbar-brand {
     color: @white;
-    font-size: @font-size-h5;
-    padding-left: 30px;
+    font-size: @font-size-h4;
+    padding: 14px 30px;
   }
-  
+
   .separator {
-    background: @white;
+    background: @brand-primary;
     width: 5px;
     height: 5px;
     transform: rotate(45deg);
     margin: 22px 10px;
   }
 }
-
