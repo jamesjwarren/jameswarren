@@ -108,7 +108,11 @@ module.exports = function(grunt) {
     less: {
       dev: {
         options: {
-          paths: ['<%= config.src %>/assets/styles','bower_components']
+          paths: ['<%= config.src %>/assets/styles','bower_components'],
+          sourceMap: true,
+          sourceMapFilename: "<%= config.dist %>/assets/styles/theme.css.map",
+          sourceMapBasepath: "<%= config.src %>/assets/styles/",
+          sourceMapURL: "http://localhost:9000/assets/styles/theme.css.map"
         },
         files: {
           '<%= config.dist %>/assets/styles/theme.css': '<%= config.src %>/assets/styles/importer.less'
