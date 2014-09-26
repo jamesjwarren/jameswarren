@@ -1,0 +1,46 @@
+//
+// Component: Charts
+// --------------------------------------------------
+
+.chart {
+  position: relative;
+
+  .bar-group {
+    float: left;
+    position: relative;
+    width: 60px;
+  }
+
+  .label {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .bar-container {
+    position: relative;
+    height: 100px;
+    border-top: 1px dashed @trans-light; 
+    border-bottom: 1px dashed @trans-light;
+    z-index: 0;
+  }
+
+  .bar {
+      position: absolute;
+      background: @trans-light;
+      height: 100%;
+      margin: 0 25%;
+      z-index: 500;
+      bottom: 0;
+      width: 50%;
+    }
+
+  hr {
+    height: 25%;
+    margin: 0;
+    border-top: none;
+    border-bottom: 1px dashed @trans-light;
+    z-index: 0;
+  }
+}

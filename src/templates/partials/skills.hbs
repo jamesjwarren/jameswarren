@@ -1,3 +1,49 @@
-<div id="skills" class="row-fluid">
-  Skills
-</div>
+<section id="skills" class="row-fluid">
+  <div class="wrapper" style="margin-left: -52.4%;">
+    <div id="ux">
+      <div class="heading">
+        <h1 class="title">{{skills.ux.title}}</h1>
+      </div>
+      <div class="detail">
+        <div class="group">
+          <p class="hz">{{{skills.ux.desc}}}</p>
+        </div>
+        <div class="group x-space">
+          <h2>Process</h2>
+        </div>
+      </div>
+    </div>
+    <div id="dev">
+      <div class="heading">
+        <h1>{{skills.dev.title}}</h1>
+      </div>
+      <div class="detail">
+        <div class="group">
+          <p class="hz">{{{skills.dev.desc}}}</p>
+        </div>
+        <div class="group">
+          <h2>Skills</h2>
+          <div class="chart">
+          {{#each skills.dev.skills}}
+            <div class="bar-group">
+              <div class="bar-container">
+                <hr><hr><hr>
+                <div class="bar" style="height: {{this.percent}}%"></div>
+              </div>
+              <span class="label">{{this.label}}</span>
+            </div>
+          {{/each}}
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="group">
+          <h2>Tools</h2>
+          {{#each skills.dev.tools}}
+            <span class="label label-light">{{this}}</span>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+//
+// Component: Box
+//
+// Generic box styles via keyword mixin 
+// Usage Example: .box(dark);
+// --------------------------------------------------
+
+.box (@color) when (@color = dark) {
+  background-color: @brand-dark;
+  color: @white;
+  h2 { color: @white; }
+}
+
+.box (@color) when (@color = color) {
+  background-color: @brand-primary;
+  color: @brand-dark;
+  h1, h2 { color: @brand-dark; }
+}
+
+.box (@color) when (@color = light) {
+  background-color: @gray-light;
+  color: @brand-dark;
+  h1, h2 { color: @brand-dark; }
+}

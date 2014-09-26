@@ -1,0 +1,49 @@
+{
+  "dev": {
+    "title": "I'm a Web Developer",
+    "desc": "I’m a web developer based in the London area, with a focus on front-end technologies. I design and build responsive websites and applications. I enjoy working collaboratively with clients to craft unique products that deliver great user experiences. I'm currently on the look out for exciting new projects to work on (part/full time or contractual), if you like my work or just fancy a chat... <a href='#contact'>get in touch</a>.",
+    "skills": [
+      {
+        "label": "HTML5",
+        "percent": "100"
+      },
+      {
+        "label": "CSS/LESS",
+        "percent": "100"
+      },
+      {
+        "label": "JavaScript",
+        "percent": "75"
+      },
+      {
+        "label": "jQuery",
+        "percent": "75"
+      },
+      {
+        "label": "Angular.js",
+        "percent": "75"
+      },
+      {
+        "label": "Node.js",
+        "percent": "50"
+      },
+      {
+        "label": "Sails.js",
+        "percent": "50"
+      },
+      {
+        "label": "PHP",
+        "percent": "25"
+      },
+      {
+        "label": "MySQL",
+        "percent": "50"
+      }
+    ],
+    "tools": ["Git","Bootstrap","Grunt","Bower","AngularUI","Illustrator","Linux","SSH","Vagrant","Chef","AWS"]
+  },
+  "ux": {
+    "title": "I'm a UX Enthusiast",
+    "desc": "I design web user experiences. From the planning to interface design the end-user is at the heart of my process."
+  }
+}
