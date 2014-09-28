@@ -9,7 +9,7 @@
 @skills-lines-dark: @gray-dark;
 
 #skills {
-  
+
   position: relative;
   overflow: hidden;
   height: @skills-height;
@@ -19,27 +19,23 @@
     position: absolute;
     width: 200%;
     height: 100%;
+    
+    // slide animation triggered from skills.js
+    margin-left: -52.4%;
+    .transition(margin-left 1s);
+    &.open-left { margin-left: -10%; }
+    &.open-right { margin-left: -90%; }
   }
   
-  @media screen and (min-height:700px) {
-    height: 700px;
-  }
-  
-  @media screen and (min-height:800px) {
-    height: 800px;
-  }
-  
-  @media screen and (min-height:900px) {
-    height: 900px;
-  }
-  
-  @media screen and (min-height:1000px) {
-    height: 1000px;
-  }
+  // responsive height break-points to achieve best fit
+  @media screen and (min-height:700px) { height: 700px; }
+  @media screen and (min-height:800px) { height: 800px; }
+  @media screen and (min-height:900px) { height: 900px; }
+  @media screen and (min-height:1000px) { height: 1000px; }
 }
 
 #dev, #ux {
-  
+
   position: absolute;
   height: 100%;
   
@@ -49,6 +45,7 @@
     padding-left: 50px;
     padding-right: 50px;
     
+    // horizontal line, linking heading to flowchart backbone
     &:after {
       position: absolute;
       display: block;
@@ -63,15 +60,26 @@
     position: absolute;
     top: 50%;
     width: 50%;
+    opacity: 0.1;
+    .transition(opacity 0.8s);
     
     h2 { margin-bottom: 15px;}
-    
     p { margin: 0; }
     
     .group {
       position: relative;
       padding-bottom: 30px; 
       
+      // vertical line, flowchart backbone
+      &:before {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 25px;
+        height: 100%;
+      }
+      
+      // horizontal line, flowchart link from .group to backbone
       h2, .hz {
         margin-top: -10px;
         &:before {
@@ -84,44 +92,41 @@
         }
       }
       
-      &:before {
-        position: absolute;
-        display: block;
-        content: "";
-        width: 25px;
-        height: 100%;
-      }
-      
+      // fix for first flowchart link
       &:first-child:before {
         margin-top: 10px;;
       }
       
+      // fix for last flowchart link
       &:last-child:before {
         height: 0;
       }
     }
     
-    .x-space {
-      margin-top: 10px;
-    }
+    // last-child requires extra space when < 3 groups
+    .x-space { margin-top: 10px; }
   }
+  
+  // detail states
+  &:hover .detail { opacity: 0.5; }
+  // '.open' toggle triggerd from skills.js
+  &.open .detail { opacity: 1; }
 }
+
+// Developer Section Overrides
+// --------------------------------------------------
 
 #dev {
   
   left: 50%;
   margin-left: 50px;
-  
-  .box(dark);
   width: 50%;
+  .box(dark); // apply dark box styles
   
-  .heading:after {
-    right: -30px;
-  }
+  .heading:after { right: -30px; }
   
   .detail {
     left: 408px;
-    opacity: 0.4;
     margin-top: -190px;
     
     .group {
@@ -131,18 +136,20 @@
         border-left: 1px solid @skills-lines-light;
       }
     }
-
   }
 }
 
+// UX Section Overrides
+// --------------------------------------------------
+
 #ux {
   
-  .box(color);
-  width: 50%;
   left: 0%;
+  width: 50%;
+  .box(color); // apply colored box styles
   text-align: right;
   
-  // diagonal border
+  // diagonal shaped border
   &:after{
     position: absolute;
     top: 0;
@@ -166,8 +173,6 @@
   
   .detail {
     right: 405px;
-    opacity: 0.4;
-//    margin-top: -190px;
     
     .group {
       h2:before, .hz:before { 
