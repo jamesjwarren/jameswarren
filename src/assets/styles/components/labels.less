@@ -28,3 +28,12 @@
     border: 1px solid @white;
   }
 }
+
+.tag {
+  &:after {
+    content: " / "
+  }
+  &:last-child:after {
+    content: ""
+  }
+}

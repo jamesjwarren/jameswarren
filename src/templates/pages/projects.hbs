@@ -1,11 +1,10 @@
 ---
 title: Projects
-header: <h1>Projects</h1>
 ---
-{{> header }}
-
 <div id="projects" class="thumb-list">
-  {{#each projects}}
-    {{> project-item}}
+  {{#each project }}
+    {{#each this.pages}}
+      {{> project-item }}
+    {{/each}}
   {{/each}}
 </div>

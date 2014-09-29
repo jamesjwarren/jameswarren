@@ -8,6 +8,12 @@
   background-position: center bottom;
   background-size: cover;
   margin: 0;
+  font-size: 1.2em;
+  color: @white;
+
+  &.with-content {
+    padding: 180px 0 60px 0;
+  }
 
   h1 {
     font-size: floor((@font-size-base * 2.8));
@@ -20,6 +26,26 @@
     &.offset {
       margin-left: -80px;
     }
+  }
+
+  h4 { margin: 15px 0; }
+
+  h5 {
+    color: @brand-primary;
+    margin-bottom: 15px;
+  }
+
+  .heading {
+    display: inline-block;
+    h4, h5 {
+      text-align: right;
+      color: @white;
+    }
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 15px;
   }
 
   @media screen and (min-width: 1234px) and (min-height:700px) {

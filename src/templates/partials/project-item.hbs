@@ -1,16 +1,19 @@
 <div class="row-fluid">
-  <div class="col-sm-5 details">
-    <h2>{{ name }}</h2>
+  <a href="projects/{{ basename }}.html">
+  <div class="col-sm-5 col-xs-12 details">
+    <h2>{{ data.title }}</h2>
     <h5>
-      {{#each tags}}
-        {{this}} / 
+      {{#each data.tags}}
+        <span class="tag">{{this}}</span>
       {{/each}}
     </h5>
-    <p class="hidden-xs">{{ desc }}</p>
-    <a class="btn">See Case Study</a>
+    <p class="hidden-xs">{{ data.summary }}</p>
   </div>
-  <div class="col-sm-7 thumb">
-    <img src="{{ project.thumb }}">
+  <div class="col-sm-7 col-xs-12 thumb">
+    <div class="img-container">
+      <img src="{{assets}}/images/projects/{{basename}}/{{ data.thumb }}">
+    </div>
   </div>
+  </a>
   <div class="clearfix"></div>
 </div>

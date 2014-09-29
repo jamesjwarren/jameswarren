@@ -1,8 +1,30 @@
-<section class="row-fluid header">
-  <div class="jumbotron">
-    <div class="col-md-offset-2">
-      <h5 class="visible-xs-inline">{{ site.title }}</h5>
-      {{{ header }}}
+<section class="row-fluid header {{basename}}">
+  <div class="jumbotron {{#if page.project}}with-content{{/if}}">
+    <div class="col-md-offset-2 col-md-6 col-xs-12">
+      <h4 class="visible-xs">{{site.title}}</h4>
+      {{#if page.header}}
+        {{{page.header}}}
+      {{else}}
+        {{#unless page.project}}
+          <h1>{{page.title}}</h1>
+        {{/unless}}
+      {{/if}}
+      {{#is page.project true}}
+        <div class="heading">
+          <h1>{{ page.title }}</h1>
+          <h5>Case Study</h5>
+        </div>
+        <h5>
+          {{#each page.tags}}
+            <span class="tag">{{this}}</span>
+          {{/each }}
+        </h5>
+        <p>{{page.summary}}</p>
+        {{#if page.ref}}
+          <a class="btn-ghost btn-arrow" href="{{page.ref}}" target="_blank">Visit Website</a>
+        {{/if}}
+      {{/is}}
     </div>
+    <div class="clearfix"></div>
   </div>
 </section>

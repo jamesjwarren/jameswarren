@@ -3,13 +3,15 @@
     <h4>Recent Projects</h4>
   </div>
   <div class="thumb-list">
-    {{#each projects }}
-      {{#is featured true}}
-        {{> project-item }}
-      {{/is}}
+    {{#each project }}
+      {{#each this.pages }}
+        {{#is data.featured true }}
+          {{> project-item }}
+        {{/is }}
+      {{/each }}
     {{/each }}
   </div>
   <div class="strip">
-    <a href="#"><img class="icon" width="24px" height="24px" src="{{assets}}/images/icons/plus.svg">See More Projects</a>
+    <a href="projects.html"><img class="icon" width="24px" height="24px" src="{{assets}}/images/icons/plus.svg">See More Projects</a>
   </div>
 </div>

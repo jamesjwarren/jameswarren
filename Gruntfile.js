@@ -1,17 +1,18 @@
 module.exports = function(grunt) {
-  
+
   require('load-grunt-tasks')(grunt);
 
   // Project configuration.
   grunt.initConfig({
-    
+
     pkg: grunt.file.readJSON('package.json'),
-    
+
     config: {
       src: 'src',
-      dist: 'dist'
+      dist: 'dist',
+      layoutProject: 'src/templates/layouts/project.hbs'
     },
-    
+
 //    uglify: {
 //      options: {
 //        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
@@ -21,10 +22,10 @@ module.exports = function(grunt) {
 //        dest: 'build/<%= pkg.name %>.min.js'
 //      }
 //    },
-    
+
     watch: {
       assemble: {
-        files: ['<%= config.src %>/{assets,content,data,templates}/{,*/}*.{md,hbs,yml,json,less,jpg}'],
+        files: ['<%= config.src %>/{assets,content,data,templates}/**/*.{md,hbs,yml,json,less,jpg,js}'],
         tasks: ['syncAssets','assemble']
       },
       livereload: {
@@ -56,28 +57,38 @@ module.exports = function(grunt) {
         }
       }
     },
-    
+
     assemble: {
+      options: {
+        collections: [{
+          name: 'project',
+          sortby: 'posted',
+          sortorder: 'descending'
+        }],
+        engine: "Handlebars",
+        flatten: true,
+        assets: '<%= config.dist %>/assets',
+        layout: '<%= config.src %>/templates/layouts/default.hbs',
+        data: '<%= config.src %>/data/*.{json,yml}',
+        partials: '<%= config.src %>/templates/partials/*.hbs'
+      },
       pages: {
-        options: {
-          flatten: true,
-          assets: '<%= config.dist %>/assets',
-          layout: '<%= config.src %>/templates/layouts/default.hbs',
-          data: '<%= config.src %>/data/*.{json,yml}',
-          partials: '<%= config.src %>/templates/partials/*.hbs',
-          plugins: [],
-        },
-        files: {
+        files: [{
           '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
-        }
+        },{
+          cwd: '<%= config.src %>/content/projects/',
+          dest: '<%= config.dist %>/projects/',
+          expand: true,
+          src: '**/*.hbs'
+        }]
       }
     },
-    
+
     clean: {
       dev: ['<%= config.dist %>/**/*.{html,xml}', '<%= config.dist %>/assets/**/*.!(jpg|svg)'],
       prod: ['<%= config.dist %>/**/*.{html,xml}', '<%= config.dist %>/assets/fonts/**/*.*', '<%= config.dist %>/assets/**/*.!(svg)']
     },
-    
+
     copy: {
       components: {
         files: [
@@ -104,7 +115,7 @@ module.exports = function(grunt) {
         }]
       }
     },
-    
+
     less: {
       dev: {
         options: {
@@ -128,23 +139,23 @@ module.exports = function(grunt) {
         }
       }
     },
-    
-    sync: {	
+
+    sync: {
       assets: {
-        files: [{		
-          cwd: '<%= config.src %>/assets/',	
-          src: ['**/*.!(coffee|less|svg)'],	
-          dest: '<%= config.dist %>/assets/'	
-        }]		
-      }		
+        files: [{
+          cwd: '<%= config.src %>/assets/',
+          src: ['**/*.!(coffee|less|svg)'],
+          dest: '<%= config.dist %>/assets/'
+        }]
+      }
     },
-    
+
     // provide optimisation for svg graphics
     // SVG-Cleaner is still providing much better optimisation, this is not currently active
     svgmin: {
       options: {
         plugins: [
-          { removeViewBox: true }, 
+          { removeViewBox: true },
           { removeUselessStrokeAndFill: false },
           { transformsWithOnePath: true },
           { removeRasterImages: true },
@@ -156,13 +167,13 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= config.src %>/assets/images/',	
-          src: ['**/*.svg','/*.svg'],	
+          cwd: '<%= config.src %>/assets/images/',
+          src: ['**/*.svg','/*.svg'],
           dest: '<%= config.dist %>/assets/images/'
         }]
       }
     }
-    
+
   });
 
   // Load assemble
@@ -178,7 +189,7 @@ module.exports = function(grunt) {
     'sync:assets',
     'copy:components'
   ]);
-  
+
   grunt.registerTask('compileAssetsProd', [
     'clean:prod',
     'less:prod',
@@ -186,13 +197,13 @@ module.exports = function(grunt) {
     'copy:assets',
     'copy:components'
   ]);
-  
-  
+
+
   grunt.registerTask('syncAssets', [
     'less:dev',
     'sync:assets'
   ]);
-  
+
   grunt.registerTask('server', [
     'build',
     'connect:livereload',
@@ -203,7 +214,7 @@ module.exports = function(grunt) {
 		'compileAssets',
     'assemble'
 	]);
-  
+
   grunt.registerTask('buildProd', [
 		'compileAssetsProd',
     'assemble'
