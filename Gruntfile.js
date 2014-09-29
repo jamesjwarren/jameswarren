@@ -102,13 +102,18 @@ module.exports = function(grunt) {
             cwd: './bower_components/bootstrap/dist/js/',
             src: ['bootstrap.min.js'],
             dest: '<%= config.dist %>/assets/js/'
-          },
-          {
+          },{
             expand: true,
             cwd: './bower_components/bootstrap/dist/fonts',
             src: ['**/*.*'],
             dest: '<%= config.dist %>/assets/fonts/'
+          },{
+            expand: true,
+            cwd: './bower_components/jquery.easing/js/',
+            src: ['jquery.easing.min.js'],
+            dest: '<%= config.dist %>/assets/js/'
           }
+
         ]
       },
       assets: {
