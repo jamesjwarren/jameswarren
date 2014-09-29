@@ -13,15 +13,20 @@ module.exports = function(grunt) {
       layoutProject: 'src/templates/layouts/project.hbs'
     },
 
-//    uglify: {
-//      options: {
-//        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-//      },
-//      build: {
-//        src: 'src/<%= pkg.name %>.js',
-//        dest: 'build/<%= pkg.name %>.min.js'
-//      }
-//    },
+    uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+      },
+      dev: {
+        options: {
+          sourceMap: true
+        },
+        files: { '<%= config.dist %>/assets/js/<%= pkg.name %>.min.js': ['<%= config.src %>/assets/js/**/*.js'] }
+      },
+      prod: {
+        files: { '<%= config.dist %>/assets/js/<%= pkg.name %>.min.js': ['<%= config.src %>/assets/js/**/*.js'] }
+      }
+    },
 
     watch: {
       assemble: {
@@ -65,7 +70,7 @@ module.exports = function(grunt) {
           sortby: 'posted',
           sortorder: 'descending'
         }],
-        engine: "Handlebars",
+        engine: 'Handlebars',
         flatten: true,
         assets: '<%= config.dist %>/assets',
         layout: '<%= config.src %>/templates/layouts/default.hbs',
@@ -110,7 +115,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= config.src %>/assets',
-          src: ['**/*.!(coffee|less|svg)'],
+          src: ['**/*.!(coffee|less|svg|js)'],
           dest: '<%= config.dist %>/assets/'
         }]
       }
@@ -186,6 +191,7 @@ module.exports = function(grunt) {
   grunt.registerTask('compileAssets', [
     'clean:dev',
     'less:dev',
+    'uglify:dev',
     'sync:assets',
     'copy:components'
   ]);
@@ -194,6 +200,7 @@ module.exports = function(grunt) {
     'clean:prod',
     'less:prod',
 //    'svgmin',
+    'uglify:prod',
     'copy:assets',
     'copy:components'
   ]);
