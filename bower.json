@@ -1,6 +1,6 @@
 {
-  "name": "JamesWarren-Portfolio",
-  "version": "0.0.1",
+  "name": "jameswarren",
+  "version": "0.1.0",
   "devDependencies": {},
   "dependencies": {
     "bootstrap": "~3.2.0",
