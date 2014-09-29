@@ -8,7 +8,13 @@
   background: url('../images/map.jpg');
   background-position: center center;
   border-top: @brand-primary solid 4px;
+
   .details { color: @white; margin-top: 20px; }
+
+  @media (max-width: @screen-xs-max) {
+    .details, .social { margin-top: 30px; }
+    h1 { padding: 0px 15px 15px; }
+  }
 }
 
 // translucent color overlay for map

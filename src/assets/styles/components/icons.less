@@ -1,4 +1,11 @@
-img.icon { margin-right: 10px; }
+img.icon {
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  @media (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
+    margin-right: 6px;
+  }
+}
 
 .icon-label {
   vertical-align: text-bottom;
@@ -8,4 +15,12 @@ img.icon { margin-right: 10px; }
     &:extend(a);
   }
   a:hover & { color: @brand-primary; }
+}
+
+.align-right {
+  text-align: right;
+
+  @media (max-width: @screen-xs-max) {
+    text-align: left;
+  }
 }

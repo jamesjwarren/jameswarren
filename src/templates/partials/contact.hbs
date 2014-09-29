@@ -32,9 +32,9 @@
           <div class="clearfix"></div>
         </div>
         <div class="row-fluid details">
-          <div class="col-sm-4"><a href="mailto:{{info.email}}"><img class="icon pull-left" src="{{assets}}/images/icons/mail.svg" width="30px" height="30px"><span class="icon-label">{{info.email}}</span></a></div>
-          <div class="col-sm-3"><a href="tel:{{info.phone}}"><img class="icon pull-left" src="{{assets}}/images/icons/phone.svg" width="30px" height="30px"><span class="icon-label">{{info.phone}}</span></a></div>
-          <div class="col-sm-3">
+          <div class="col-sm-4 col-xs-12"><a href="mailto:{{info.email}}"><img class="icon pull-left" src="{{assets}}/images/icons/mail.svg" width="30px" height="30px"><span class="icon-label">{{info.email}}</span></a></div>
+          <div class="col-sm-3 col-xs-12"><a href="tel:{{info.phone}}"><img class="icon pull-left" src="{{assets}}/images/icons/phone.svg" width="30px" height="30px"><span class="icon-label">{{info.phone}}</span></a></div>
+          <div class="col-sm-3 col-xs-12 align-right">
             {{#each info.social}}
               <a href="{{this.url}}"><img class="icon social" src="assets/images/icons/{{this.icon}}" width="30px" height="30px" alt="this.alt"></a>
             {{/each}}

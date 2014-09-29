@@ -1,6 +1,9 @@
 //
 // Component: Navbar
 // --------------------------------------------------
+.nav > li {
+  display: inline-block;
+}
 
 nav.navbar {
   background: rgba(0,0,0,0.15);
@@ -36,5 +39,12 @@ nav.navbar {
     height: 5px;
     transform: rotate(45deg);
     margin: 22px 10px;
+  }
+
+  @media (max-width: @screen-xs-max) {
+    .navbar-nav {
+      float: none; margin-right: 0; text-align: center;
+    }
+    .separator { margin: 0px 5px; }
   }
 }
