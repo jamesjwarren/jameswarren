@@ -213,6 +213,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('syncAssets', [
     'less:dev',
+    'uglify:dev',
     'sync:assets'
   ]);
 
