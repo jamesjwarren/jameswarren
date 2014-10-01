@@ -6,7 +6,7 @@
 $(document).ready(function () {
 
   var body = $('body'),
-      links = $('.index .navbar a');
+      links = $('.index .navbar a, a.hashnav');
 
   function scrollTo(slideId, offset) {
     body.animate({
@@ -19,7 +19,6 @@ $(document).ready(function () {
     e.preventDefault();
     slideId = $(this).attr('href');
     slideId = slideId.substr(1);
-    console.log(slideId);
 
     offset = $(this).attr('data-offset'); // get custom offset attribute
     if(!offset){ offset = 50; } // revert to default offset
