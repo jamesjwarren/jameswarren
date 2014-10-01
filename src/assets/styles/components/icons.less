@@ -10,8 +10,9 @@ img.icon {
 .icon-label {
   vertical-align: text-bottom;
   &:extend(h5);
+  font-size: 0.9em;
   a & {
-    color: white;
+    color: @white;
     &:extend(a);
   }
   a:hover & { color: @brand-primary; }
@@ -23,4 +24,13 @@ img.icon {
   @media (max-width: @screen-xs-max) {
     text-align: left;
   }
+}
+
+.icon-group {
+  float: left;
+  text-align: center;
+  margin: 0 15px;
+
+  img.icon { display: inline-block; margin-right: 0; }
+  .icon-label { display: block; }
 }

@@ -6,7 +6,6 @@
 }
 
 nav.navbar {
-  background: rgba(0,0,0,0.15);
   border: none;
   font-size: @font-size-h4;
   letter-spacing: 1px;
@@ -15,20 +14,14 @@ nav.navbar {
   .navbar-nav {
     float: right;
     margin-right: 65px;
-    a {
-      padding-top: 14px;
-      padding-bottom: 14px;
-    }
-    a:link, a:visited {
-      color: @white;
-    }
-    a:hover {
-      color: @brand-primary;
-    }
+  }
+
+  .navbar-nav a, .navbar-brand {
+//    padding-top: 14px;
+//    padding-bottom: 14px;
   }
 
   .navbar-brand {
-    color: @white;
     font-size: @font-size-h4;
     padding: 14px 30px;
   }

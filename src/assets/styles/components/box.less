@@ -1,26 +1,57 @@
 //
 // Component: Box
 //
-// Generic box styles via keyword mixin 
-// Usage Example: .box(dark);
+// Generic box styles via keyword mixin
+// Usage Example: .box(dark, none);
 // --------------------------------------------------
 
-.box (@color) when (@color = dark) {
+.box-dark {
   background-color: @brand-dark;
-  color: @white;
-  h2 { color: @white; }
+  color: @trans-light;
+  h2 { color: @brand-primary; }
+  h3, h4, h5 { color: @white; }
+  .label-trans { &:extend(.label-trans-light); }
 }
 
-.box (@color) when (@color = color) {
+.box-color {
   background-color: @brand-primary;
-  color: @brand-dark;
-  h1, h2 { color: @brand-dark; }
+  color: @trans-dark;
+  h1, h2, h3, h4, h5 { color: @brand-dark; }
+  h5 { border-bottom-color: @trans-dark; }
   a:link, a:visited { color: @brand-dark; }
-  a:hover { color: lighten(@brand-dark, 20%); }
+  .label-trans { &:extend(.label-trans-dark); }
+  em { color: @brand-dark; }
 }
 
-.box (@color) when (@color = light) {
+.box-light {
   background-color: @gray-light;
   color: @brand-dark;
   h1, h2 { color: @brand-dark; }
+  em { color: @brand-dark; }
+}
+
+.box-arrow-left (@color) {
+  &:after {
+    right: 100%;
+    margin-right: -1px;
+
+    & when (@color = color) { border-right-color: @brand-primary; }
+    & when (@color = dark) { border-right-color: @brand-dark; }
+
+    // move arrow to bottom for xs screen size
+    @media (max-width: @screen-xs-max) { top: 100%; left: 50%; left: ~"calc(50% - 16px)"; transform: rotate(270deg); margin-top: -1px; }
+  }
+}
+
+.box-arrow-right (@color) {
+  &:after {
+    left: 100%;
+    margin-left: -1px;
+
+    & when (@color = color) { border-left-color: @brand-primary; }
+    & when (@color = dark) { border-left-color: @brand-dark; }
+
+    // move arrow to bottom for xs screen size
+    @media (max-width: @screen-xs-max) { top: 100%; left: 50%; left: ~"calc(50% - 16px)"; transform: rotate(90deg); margin-top: -1px; }
+  }
 }
