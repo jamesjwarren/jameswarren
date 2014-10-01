@@ -204,6 +204,22 @@ module.exports = function(grunt) {
           {src: ['dist/**'], dest: ''}
         ]
       }
+    },
+
+    // minify HTML
+    htmlmin: {
+      prod: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= config.dist %>',
+          src: '**/*.html',
+          dest: '<%= config.dist %>/'
+        }]
+      }
     }
 
   });
@@ -230,8 +246,7 @@ module.exports = function(grunt) {
 //    'svgmin',
     'uglify:prod',
     'copy'
-  ]);
-
+  ])
 
   grunt.registerTask('syncAssets', [
     'less:dev',
@@ -253,6 +268,7 @@ module.exports = function(grunt) {
   grunt.registerTask('buildProd', [
 		'compileAssetsProd',
     'assemble',
+    'htmlmin',
     'compress'
 	]);
 
