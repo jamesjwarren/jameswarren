@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JH Design Portfolio | James Warren</title>
+    <title>Joanna Hobbs | James Warren</title>
 
     <!-- Custom styles for this template -->
     <link href="../assets/styles/theme.css" rel="stylesheet">
@@ -20,27 +20,27 @@
   </head>
   <body>
 
-    <div class="container-fluid" role="main">
+    <div class="container-fluid jh" role="main">
 
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid row-fluid">
-    <div class="col-md-2 navbar-header hidden-xs">
-      <a class="navbar-brand" href="/">James Warren</a>
+    <div class="col-md-3 navbar-header hidden-xs">
+      <a class="navbar-brand" href="/#header">James Warren</a>
     </div>
     <ul class="nav navbar-nav">
       <li><a href="/#projects">Projects</a></li>
       <li class="separator"></li>
-      <li><a href="/#skills">Skills</a></li>
+      <li><a href="/#skills" data-offset="0">Skills</a></li>
       <li class="separator"></li>
-      <li><a href="/#info">Info</a></li>
+      <li><a href="/#info" data-offset="60">Info</a></li>
       <li class="separator hidden-xs"></li>
-      <li><a href="/#contact" class="hidden-xs">Contact</a></li>
+      <li class="hidden-xs"><a href="/#contact" >Contact</a></li>
     </ul>
   </div>
 </nav>
 
 
-      <section class="row-fluid header jh">
+      <header id="header" class="row-fluid header">
   <div class="jumbotron with-content">
     <div class="col-md-offset-2 col-md-6 col-xs-12">
       <h4 class="visible-xs">James Warren</h4>
@@ -49,8 +49,8 @@
 
 
         <div class="heading">
-          <h1>JH Design Portfolio</h1>
-          <h5>Case Study</h5>
+          <h1>Joanna Hobbs</h1>
+          <h5>Graphic Design Portfolio</h5>
         </div>
         <h5>
 
@@ -58,8 +58,10 @@
 
             <span class="tag">CMS</span>
 
+            <span class="tag">Responsive</span>
+
         </h5>
-        <p>Joanna Hobbs is a graduate graphic designer. We collaborated to design and develop a portfolio to showcase her work.
+        <p>Joanna Hobbs is a graduate graphic designer. We collaborated to design and develop a portfolio site to showcase her work.
 </p>
 
           <a class="btn-ghost btn-arrow" href="http://www.joannahobbs.co.uk" target="_blank">Visit Website</a>
@@ -68,19 +70,40 @@
     </div>
     <div class="clearfix"></div>
   </div>
-</section>
+</header>
 
 
 
-<article class="container jh">
+<article class="container-fluid">
 
 <section class="row-fluid">
-  <h3 class="col-md-12"></h3>
-  <div class="col-md-6"></div>
-  <div class="col-md-6"></div>
+  <h3>Design</h3>
+  <div class="col-md-6">
+    <p>This website design was a collaborative effort; combining Joanna's admirable design skills with my knowledge of web layout techniques and technology.</p>
+    <div class="palette">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="col-md-6 img-container center">
+    <img src="../assets/images/projects/jh/jh-logo.svg" width="250">
+  </div>
+</section>
+<section class="row-fluid">
+  <div class="container">
+    <div class="col-md-12 center">
+      <h4>More Case Study Details Coming Soon</h4>
+    </div>
+  </div>
 </section>
 
 </article>
+
+
+      <footer>
+  <p>James Warren &copy; 2014</p>
+</footer>
 
 
     </div>
@@ -89,6 +112,7 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.easing.min.js"></script>
     <script src="../assets/js/jameswarren.min.js"></script>
   </body>
 </html>

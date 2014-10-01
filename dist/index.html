@@ -20,27 +20,27 @@
   </head>
   <body>
 
-    <div class="container-fluid" role="main">
+    <div class="container-fluid index" role="main">
 
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid row-fluid">
-    <div class="col-md-2 navbar-header hidden-xs">
-      <a class="navbar-brand" href="/">James Warren</a>
+    <div class="col-md-3 navbar-header hidden-xs">
+      <a class="navbar-brand" href="/#header">James Warren</a>
     </div>
     <ul class="nav navbar-nav">
       <li><a href="/#projects">Projects</a></li>
       <li class="separator"></li>
-      <li><a href="/#skills">Skills</a></li>
+      <li><a href="/#skills" data-offset="0">Skills</a></li>
       <li class="separator"></li>
-      <li><a href="/#info">Info</a></li>
+      <li><a href="/#info" data-offset="60">Info</a></li>
       <li class="separator hidden-xs"></li>
-      <li><a href="/#contact" class="hidden-xs">Contact</a></li>
+      <li class="hidden-xs"><a href="/#contact" >Contact</a></li>
     </ul>
   </div>
 </nav>
 
 
-      <section class="row-fluid header index">
+      <header id="header" class="row-fluid header">
   <div class="jumbotron ">
     <div class="col-md-offset-2 col-md-6 col-xs-12">
       <h4 class="visible-xs">James Warren</h4>
@@ -51,11 +51,11 @@
     </div>
     <div class="clearfix"></div>
   </div>
-</section>
+</header>
 
 
 
-<div id="projects">
+<section id="projects">
   <div class="strip">
     <h4>Recent Projects</h4>
   </div>
@@ -66,20 +66,19 @@
           <div class="row-fluid">
   <a href="projects/esc.html">
   <div class="col-sm-5 col-xs-12 details">
-    <h2>ESC App</h2>
+    <h2>ESC</h2>
     <h5>
-      
-        <span class="tag">UX</span>
-      
-        <span class="tag">Development</span>
-      
+      App Design &amp; Development
     </h5>
-    <p class="hidden-xs">ESC is a digital story-telling platform that re-connects people with places and nature. Stories ... user-generated and curated through user interaction and engagement.
+    <p class="hidden-xs">ESC is a digital story-telling platform that re-connects people with places and nature.
 </p>
+
+      <span class="label-trans">concept</span>
+
   </div>
   <div class="col-sm-7 col-xs-12 thumb">
     <div class="img-container">
-      <img src="../assets/images/projects/esc/main.jpg">
+      <img src="../assets/images/projects/esc/ESC-2.jpg">
     </div>
   </div>
   </a>
@@ -90,27 +89,32 @@
       
 
           <div class="row-fluid">
-  <a href="projects/jh.html">
+  <a href="projects/firstmate.html">
   <div class="col-sm-5 col-xs-12 details">
-    <h2>JH Design Portfolio</h2>
+    <h2>First Mate</h2>
     <h5>
-      
-        <span class="tag">Development</span>
-      
-        <span class="tag">CMS</span>
-      
+      App Design &amp; Development
     </h5>
-    <p class="hidden-xs">Joanna Hobbs is a graduate graphic designer. We collaborated to design and develop a portfolio to showcase her work.
+    <p class="hidden-xs">Cruise and maintenance logging for shared-ownership boats.
 </p>
+
+      <span class="label-trans">dev</span>
+
   </div>
   <div class="col-sm-7 col-xs-12 thumb">
     <div class="img-container">
-      <img src="../assets/images/projects/jh/main.png">
+      <img src="../assets/images/projects/firstmate/header.jpg">
     </div>
   </div>
   </a>
   <div class="clearfix"></div>
 </div>
+
+
+
+
+
+
 
 
       
@@ -119,31 +123,59 @@
   <div class="strip">
     <a href="projects.html"><img class="icon" width="24px" height="24px" src="assets/images/icons/plus.svg">See More Projects</a>
   </div>
-</div>
+</section>
 
 
 <section id="skills" class="row-fluid">
   <div class="wrapper">
     <div id="ux">
       <div class="heading">
-        <h1 class="title">I&#x27;m a UX Enthusiast</h1>
+        <h1 class="title"><span class="hidden-md">I'm a </span>UX Enthusiast</h1>
       </div>
       <div class="detail">
         <div class="group">
-          <p class="hz">I design web user experiences. From the planning to interface design the end-user is at the heart of my process.</p>
+          <p class="hz">I design web user experiences. From the planning stages to the interface design and implementation, the end-user is at the heart of my process.</p>
         </div>
-        <div class="group x-space">
+        <div class="group"></div>
+        <div class="group">
           <h2>Process</h2>
+          <div class="process">
+
+            <div class="icon-group">
+              <img class="icon" src="../assets/images/icons/document.svg" alt="UX Strategy" width="64" height="64">
+              <span class="icon-label">UX Strategy</span>
+              <span class="icon-label">1</span>
+            </div>
+
+            <div class="icon-group">
+              <img class="icon" src="../assets/images/icons/wireframe.svg" alt="Wireframing" width="64" height="64">
+              <span class="icon-label">Wireframing</span>
+              <span class="icon-label">2</span>
+            </div>
+
+            <div class="icon-group">
+              <img class="icon" src="../assets/images/icons/screen.svg" alt="Mockup" width="64" height="64">
+              <span class="icon-label">Mockup</span>
+              <span class="icon-label">3</span>
+            </div>
+
+            <div class="icon-group">
+              <img class="icon" src="../assets/images/icons/screen-code.svg" alt="Development" width="64" height="64">
+              <span class="icon-label">Development</span>
+              <span class="icon-label">4</span>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
     <div id="dev">
       <div class="heading">
-        <h1>I&#x27;m a Web Developer</h1>
+        <h1 class="title"><span class="hidden-md">I'm a </span>Web Developer</h1>
       </div>
       <div class="detail">
         <div class="group">
-          <p class="hz">I’m a web developer based in the London area, with a focus on front-end technologies. I design and build responsive websites and applications. I enjoy working collaboratively with clients to craft unique products that deliver great user experiences. I'm currently on the look out for exciting new projects to work on (part/full time or contractual), if you like my work or just fancy a chat... <a href='#contact'>get in touch</a>.</p>
+          <p class="hz">I’m a <em>Web Developer</em> based in London, with a focus on <em>front-end</em> technologies. I design and build responsive websites and applications. I enjoy working collaboratively with clients to craft unique products that deliver great user experiences. I'm currently on the look out for exciting new projects to work on (part/full time or contractual), if you like my work or just fancy a chat... <a href='/#contact' class='hashnav'>get in touch</a>.</p>
         </div>
         <div class="group">
           <h2>Skills</h2>
@@ -152,7 +184,7 @@
             <div class="bar-group">
               <div class="bar-container">
                 <hr><hr><hr>
-                <div class="bar" style="height: 100%"></div>
+                <div class="bar" data-perc="100"></div>
               </div>
               <span class="label">HTML5</span>
             </div>
@@ -160,7 +192,7 @@
             <div class="bar-group">
               <div class="bar-container">
                 <hr><hr><hr>
-                <div class="bar" style="height: 100%"></div>
+                <div class="bar" data-perc="100"></div>
               </div>
               <span class="label">CSS/LESS</span>
             </div>
@@ -168,7 +200,7 @@
             <div class="bar-group">
               <div class="bar-container">
                 <hr><hr><hr>
-                <div class="bar" style="height: 75%"></div>
+                <div class="bar" data-perc="75"></div>
               </div>
               <span class="label">JavaScript</span>
             </div>
@@ -176,7 +208,7 @@
             <div class="bar-group">
               <div class="bar-container">
                 <hr><hr><hr>
-                <div class="bar" style="height: 75%"></div>
+                <div class="bar" data-perc="75"></div>
               </div>
               <span class="label">jQuery</span>
             </div>
@@ -184,7 +216,7 @@
             <div class="bar-group">
               <div class="bar-container">
                 <hr><hr><hr>
-                <div class="bar" style="height: 75%"></div>
+                <div class="bar" data-perc="75"></div>
               </div>
               <span class="label">Angular.js</span>
             </div>
@@ -192,7 +224,7 @@
             <div class="bar-group">
               <div class="bar-container">
                 <hr><hr><hr>
-                <div class="bar" style="height: 50%"></div>
+                <div class="bar" data-perc="50"></div>
               </div>
               <span class="label">Node.js</span>
             </div>
@@ -200,7 +232,7 @@
             <div class="bar-group">
               <div class="bar-container">
                 <hr><hr><hr>
-                <div class="bar" style="height: 50%"></div>
+                <div class="bar" data-perc="50"></div>
               </div>
               <span class="label">Sails.js</span>
             </div>
@@ -208,7 +240,7 @@
             <div class="bar-group">
               <div class="bar-container">
                 <hr><hr><hr>
-                <div class="bar" style="height: 25%"></div>
+                <div class="bar" data-perc="25"></div>
               </div>
               <span class="label">PHP</span>
             </div>
@@ -216,7 +248,7 @@
             <div class="bar-group">
               <div class="bar-container">
                 <hr><hr><hr>
-                <div class="bar" style="height: 50%"></div>
+                <div class="bar" data-perc="50"></div>
               </div>
               <span class="label">MySQL</span>
             </div>
@@ -227,27 +259,27 @@
         <div class="group">
           <h2>Tools</h2>
 
-            <span class="label label-light">Git</span>
+          <span class="label-light">Git</span>
 
-            <span class="label label-light">Bootstrap</span>
+          <span class="label-light">Bootstrap</span>
 
-            <span class="label label-light">Grunt</span>
+          <span class="label-light">Grunt</span>
 
-            <span class="label label-light">Bower</span>
+          <span class="label-light">Bower</span>
 
-            <span class="label label-light">AngularUI</span>
+          <span class="label-light">AngularUI</span>
 
-            <span class="label label-light">Illustrator</span>
+          <span class="label-light">Illustrator</span>
 
-            <span class="label label-light">Linux</span>
+          <span class="label-light">Linux</span>
 
-            <span class="label label-light">SSH</span>
+          <span class="label-light">SSH</span>
 
-            <span class="label label-light">Vagrant</span>
+          <span class="label-light">Vagrant</span>
 
-            <span class="label label-light">Chef</span>
+          <span class="label-light">Chef</span>
 
-            <span class="label label-light">AWS</span>
+          <span class="label-light">AWS</span>
 
         </div>
       </div>
@@ -269,7 +301,7 @@
   </div>
   <div class="row-fluid">
     <div class="col-sm-2 col-sm-offset-1 col-xs-3 line-ident">
-      <span class="label label-dark label-large">Professional</span>
+      <span class="label-dark label-large">Professional</span>
     </div>
     <div class="clearfix"></div>
   </div>
@@ -302,7 +334,7 @@
   
   <div class="row-fluid">
     <div class="col-sm-2 col-sm-offset-1 col-xs-3 line-ident">
-      <span class="label label-dark label-large">Interests</span>
+      <span class="label-dark label-large">Interests</span>
     </div>
     <div class="clearfix"></div>
   </div>
@@ -371,7 +403,7 @@
         </div>
         <div class="row-fluid details">
           <div class="col-sm-4 col-xs-12"><a href="mailto:mail@jamesjwarren.com"><img class="icon pull-left" src="assets/images/icons/mail.svg" width="30px" height="30px"><span class="icon-label">mail@jamesjwarren.com</span></a></div>
-          <div class="col-sm-3 col-xs-12"><a href="tel:+44 (0) 7704 493054"><img class="icon pull-left" src="assets/images/icons/phone.svg" width="30px" height="30px"><span class="icon-label">+44 (0) 7704 493054</span></a></div>
+          <div class="col-sm-3 col-xs-12"><a href="tel:+44 (0)7704 493054"><img class="icon pull-left" src="assets/images/icons/phone.svg" width="30px" height="30px"><span class="icon-label">+44 (0)7704 493054</span></a></div>
           <div class="col-sm-3 col-xs-12 align-right">
             
               <a href="http://uk.linkedin.com/in/jamesjwarren/"><img class="icon social" src="assets/images/icons/linkedin.svg" width="30px" height="30px" alt="this.alt"></a>
@@ -391,12 +423,18 @@
 
 
 
+      <footer>
+  <p>James Warren &copy; 2014</p>
+</footer>
+
+
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
     <script src="assets/js/jameswarren.min.js"></script>
   </body>
 </html>
