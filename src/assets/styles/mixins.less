@@ -2,23 +2,16 @@
 // Custom LESS Mixins
 // --------------------------------------------------
 
-// placeholder text color
-.placeholder(@color) {
-  ::-webkit-input-placeholder {
-    color: @color;
-  }
+.translateY(@y) {
+  -webkit-transform: translateY(@y);
+      -ms-transform: translateY(@y); // IE9 only
+       -o-transform: translateY(@y);
+          transform: translateY(@y);
 
-  :-moz-placeholder { /* Firefox 18- */
-    color: @color;
-  }
-
-  ::-moz-placeholder {  /* Firefox 19+ */
-     color: @color;
-  }
-
-  :-ms-input-placeholder {
-     color: @color;
-  }
+  -webkit-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+       -o-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 // Img Filters
