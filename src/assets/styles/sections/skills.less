@@ -1,6 +1,6 @@
 //
 // skills.less
-// 
+//
 // Specific styles for skills section
 // --------------------------------------------------
 
@@ -14,37 +14,39 @@
   overflow: hidden;
   height: @skills-height;
   background: @brand-dark;
-  
+
   .wrapper {
     position: absolute;
     width: 200%;
     height: 100%;
-    
+
     // slide animation triggered from skills.js
     margin-left: -52.4%;
     .transition(margin-left 1s);
-    &.open-left { margin-left: -10%; }
-    &.open-right { margin-left: -90%; }
+    &.open-left { margin-left: -5%; }
+    &.open-right { margin-left: -95%; }
   }
-  
-  // responsive height break-points to achieve best fit
-  @media screen and (min-height:700px) { height: 700px; }
-  @media screen and (min-height:800px) { height: 800px; }
-  @media screen and (min-height:900px) { height: 900px; }
-  @media screen and (min-height:1000px) { height: 1000px; }
+
+  // responsive height breakpoints to achieve best fit
+  @media screen and (min-height: @screen-v1-min) { height: @screen-v1-max; }
+  @media screen and (min-height: @screen-v2-min) { height: @screen-v2-max; }
+  @media screen and (min-height: @screen-v3-min) { height: @screen-v3-max; }
+  @media screen and (min-height: @screen-v4-min) { height: @screen-v4-min; }
 }
 
 #dev, #ux {
 
   position: absolute;
   height: 100%;
-  
+
   .heading {
     position: absolute;
     top: 50%;
+    margin-top: -100px;
     padding-left: 50px;
     padding-right: 50px;
-    
+    cursor: pointer;
+
     // horizontal line, linking heading to flowchart backbone
     &:after {
       position: absolute;
@@ -55,21 +57,24 @@
       border-bottom: 1px solid @skills-lines-light;
     }
   }
-  
+
   .detail {
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     width: 50%;
     opacity: 0.1;
     .transition(opacity 0.8s);
-    
+
+    @media screen and (min-height: @screen-v3-min) { margin-top: -70px; }
+
     h2 { margin-bottom: 15px;}
     p { margin: 0; }
-    
+
     .group {
       position: relative;
-      padding-bottom: 30px; 
-      
+      padding-bottom: 30px;
+
       // vertical line, flowchart backbone
       &:before {
         position: absolute;
@@ -78,7 +83,7 @@
         width: 25px;
         height: 100%;
       }
-      
+
       // horizontal line, flowchart link from .group to backbone
       h2, .hz {
         margin-top: -10px;
@@ -91,47 +96,57 @@
           border-top: 1px solid @skills-lines-light;
         }
       }
-      
+
       // fix for first flowchart link
-      &:first-child:before {
-        margin-top: 10px;;
-      }
-      
+      &:first-child:before { margin-top: 10px; }
       // fix for last flowchart link
-      &:last-child:before {
-        height: 0;
-      }
+      &:last-child:before { height: 0; }
     }
-    
-    // last-child requires extra space when < 3 groups
-    .x-space { margin-top: 10px; }
   }
-  
-  // detail states
+
+  // detail animation states
   &:hover .detail { opacity: 0.5; }
   // '.open' toggle triggerd from skills.js
   &.open .detail { opacity: 1; }
+  &.open .chart { opacity: 1; }
+
+  @media screen and (min-height: @screen-v1-min) {
+    .detail .group { padding-bottom: 50px; }
+  }
+
+  @media screen and (min-height: @screen-v2-min) {
+    .detail .group { padding-bottom: 60px; font-size: 1.2em; }
+  }
+  @media screen and (min-height: @screen-v3-min) {
+    .group { padding-bottom: 80px; }
+  }
 }
 
 // Developer Section Overrides
 // --------------------------------------------------
 
 #dev {
-  
+
+  .chart { .transition(opacity 0.5s); opacity: 0; }
+
   left: 50%;
   margin-left: 50px;
   width: 50%;
-  .box(dark); // apply dark box styles
-  
+  &:extend(.box-dark all); // apply dark box styles
+
   .heading:after { right: -30px; }
-  
+
   .detail {
-    left: 408px;
-    margin-top: -190px;
-    
+    left: 445px;
+
+    // response to type size increase for extra large screens
+    @media screen and (min-width: @screen-xl-min) { left: 532px; }
+
+    @media screen and (max-width: @screen-md-max) { left: 373px; }
+
     .group {
       h2:before, .hz:before { left: -40px; }
-      &:before { 
+      &:before {
         left: -41px;
         border-left: 1px solid @skills-lines-light;
       }
@@ -143,12 +158,12 @@
 // --------------------------------------------------
 
 #ux {
-  
+
   left: 0%;
   width: 50%;
-  .box(color); // apply colored box styles
+  &:extend(.box-color all); // apply colored box styles
   text-align: right;
-  
+
   // diagonal shaped border
   &:after{
     position: absolute;
@@ -162,27 +177,37 @@
     border-bottom: 1000px solid @brand-primary;
     z-index: 100;
   }
-  
+
   .heading {
     right: 0;
-    &:after{ 
+    &:after{
       left: -30px;
       border-color: @skills-lines-dark;
     }
   }
-  
+
   .detail {
-    right: 405px;
-    
+    right: 443px;
+
+    // response to type size increase for extra large screens
+    @media screen and (min-width: @screen-xl-min) { right: 525px; }
+
+    @media screen and (max-width: @screen-md-max) { right: 368px; }
+
     .group {
-      h2:before, .hz:before { 
+      h2:before, .hz:before {
         right: -44px;
         border-color: @skills-lines-dark;
       }
-      &:before { 
+      &:before {
         right: -44px;
         border-right: 1px solid @skills-lines-dark;
       }
     }
+  }
+
+  .process {
+    position: relative;
+    float: right;
   }
 }
