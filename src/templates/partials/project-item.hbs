@@ -3,11 +3,12 @@
   <div class="col-sm-5 col-xs-12 details">
     <h2>{{ data.title }}</h2>
     <h5>
-      {{#each data.tags}}
-        <span class="tag">{{this}}</span>
-      {{/each}}
+      {{ data.subtitle }}
     </h5>
     <p class="hidden-xs">{{ data.summary }}</p>
+    {{#if data.status }}
+      <span class="label-trans">{{ data.status }}</span>
+    {{/if}}
   </div>
   <div class="col-sm-7 col-xs-12 thumb">
     <div class="img-container">

@@ -1,17 +1,80 @@
 ---
-title: ESC App
+title: ESC
+subtitle: App Design & Development
 project: true
+status: concept
 featured: true
 posted: 2014-09-29
 tags: ["UX","Development"]
-thumb: main.jpg
+thumb: ESC-2.jpg
 summary: >
-  ESC is a digital story-telling platform that re-connects people with places and nature. Stories ... user-generated and curated through user interaction and engagement.
+  ESC is a digital story-telling platform that re-connects people with places and nature.
 
 layout: <%= config.layoutProject %>
 ---
+<section class="row-fluid no-pad-bottom">
+  <h3>Tell a Story</h3>
+  <div class="col-md-6">
+    <p>Tell the story of your adventure, from the green wilderness to those hidden urban gems.</p>
+    <p><em>Collaborate</em> with fellow adventurers: places tell their own stories.</p>
+  </div>
+  <div class="col-md-6 img-container center">
+    <img src="../assets/images/projects/esc/ESC-4.jpg">
+  </div>
+</section>
+
+<section class="row-fluid no-pad-bottom">
+  <h3>Re-connecting People with Place</h3>
+  <div class="col-md-6 img-container center">
+    <img src="../assets/images/projects/esc/ESC-3.jpg">
+  </div>
+  <div class="col-md-6">
+    <p><em>Curated</em> escape ideas and suggestions, from the story feed.</p>
+    <p><em>Discover</em> your nearby escape through the mobile app. Instantly <em>share</em> your story and photos in the moment.</p>
+  </div>
+</section>
+
+<!--
+<section class="row-fluid no-pad-bottom">
+  <h3>User Flow</h3>
+  <div class="col-md-6">
+    <ul>
+      <li>Set Up Profile</li>
+      <li>Write Stories</li>
+      <li>Post Photos</li>
+      <li>Find nearby places to ESC</li>
+      <li>ESC suggestions</li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <img src="../assets/images/projects/esc/ESC-4.jpg">
+  </div>
+</section>
+-->
 <section class="row-fluid">
-  <h3 class="col-md-12"></h3>
-  <div class="col-md-6"></div>
-  <div class="col-md-6"></div>
+  <h3>Technology Stack</h3>
+  <div class="col-md-6">
+    <h5>Front-end</h5>
+    <p>An <em>Angular.js</em> application consuming the API through web sockets, to enable real-time interactions.</p>
+    <h5>Back-end</h5>
+    <p>The server-side portion of the application provides a RESTful API service with support for web socket connections, built on the <em>Sails.js</em> framework. MongoDB is used as the primary datastore.</p>
+  </div>
+  <div class="col-md-6 center">
+    <img src="../assets/images/AngularJS-Shield-small.png" alt="Angular.js">
+    <img src="https://raw.githubusercontent.com/balderdashy/sails-docs/master/resources/styleguide/sailslogo_gray.png" alt="Sails.js">
+    <img src="../assets/images/nodejs-light.svg" alt="Node.js">
+  </div>
+</section>
+<section class="row-fluid">
+  <h3>What's Next?</h3>
+  <div class="col-md-6">
+    <p>ESC is currently in a concept and design phase. We look forward to ploughing on with development but we're keen to apply some more thought and develop the concept further.</p>
+  </div>
+  <div class="col-md-6">
+    <p>Next on the roadmap:</p>
+    <ol>
+      <li>UX design strategy</li>
+      <li>UI mockups</li>
+    </ol>
+  </div>
 </section>

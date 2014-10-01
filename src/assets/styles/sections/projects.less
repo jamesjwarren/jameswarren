@@ -4,10 +4,185 @@
 // Styles for individual project case studies
 // --------------------------------------------------
 
+.projects .jumbotron {
+  background-image: none;
+  background: @body-bg;
+  h1 { color: @brand-dark; }
+  padding: 200px 0 150px 0;
+}
+
+article {
+  section {
+    padding: 20px 60px 80px;
+
+    &:nth-child(even) {
+      background: @gray-lighter;
+    }
+
+    .annotation {
+      position: relative;
+      display: inline-block;
+      .node {
+        position: absolute;
+        background: @brand-primary;
+        border-radius: 10px;
+        height: 20px;
+        width: 20px;
+        box-shadow: 0 0 2px @gray-darker;
+
+        &:before {
+          display: block;
+          content: '';
+          border: 3px solid @brand-primary;
+          width: 180%;
+          height: 180%;
+          border-radius: 180%;
+          margin-top: -40%;
+          margin-left: -40%;
+          box-shadow: 0 0 2px @gray-darker;
+        }
+      }
+    }
+    img { margin-bottom: none; }
+
+    &.no-pad-bottom { padding-bottom: 0; }
+  }
+
+  // clearfix for sections
+  &>section.row-fluid {
+    .clearfix();
+  }
+
+
+
+  em { color: @brand-dark; }
+}
+
+.palette {
+  text-align: center;
+  margin-top: 50px;
+  >span {
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    border: 1px solid @gray-light;
+  }
+}
+
 // ESC
 // --------------------------------------------------
 .esc {
   .jumbotron {
-    background: url(../images/projects/esc/main.jpg);
+    background-image: url(../images/projects/esc/ESC-2.jpg);
+    background-position: left 45%;
+    text-shadow: 0px 1px 2px @gray-darker;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      background-image: url(../images/projects/esc/logo.svg);
+      background-size: 15%;
+      background-position: center right 10%;
+      background-repeat: no-repeat;
+    }
+    &:after {
+      background-color: rgba(0,0,0,0.4);
+    }
+  }
+}
+
+// JH
+// --------------------------------------------------
+@jh-primary:  #cb6d51;
+@jh-white:    #f6f6f6;
+@jh-dark:    #4b4847;
+
+.jh {
+
+  .jumbotron {
+    background-image: url(../images/projects/jh/tea-2.jpg);
+    background-size: 50%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-color: #f6f6f6;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 50%;
+      top: 0;
+      bottom: 0;
+      background-image: url(../images/projects/jh/tea-1.jpg);
+      background-size: contain;
+      background-position: center left;
+      background-repeat: no-repeat;
+    }
+    &:after {
+      background-color: rgba(0,0,0,0.6);
+    }
+  }
+
+  article section:nth-child(even) {
+    background: @jh-white;
+  }
+
+  .palette {
+    >span:nth-child(1){ background: @jh-primary; }
+    >span:nth-child(2){ background: @jh-white; }
+    >span:nth-child(3){ background: @jh-dark; }
+  }
+}
+
+// First Mate
+// --------------------------------------------------
+.firstmate {
+  .jumbotron {
+    background-image: url(../images/projects/firstmate/header.jpg);
+    background-position: 50% 35%;
+    text-shadow: 0px 1px 2px @gray-darker;
+  }
+}
+
+// Mandarin
+// --------------------------------------------------
+@mand-primary:    rgb(190,20,8);
+@mand-secondary:  #321d9a;
+@mand-white:      #feefc8;
+@mand-dark:       #2B2B2B;
+
+.mandarin {
+  .jumbotron {
+    background-image: url(../images/projects/mandarin/P1050374.jpg);
+    background-position: center;
+    text-shadow: 0px 1px 2px @gray-darker;
+
+    &:after {
+      background-color: rgba(0,0,0,0.6);
+    }
+  }
+
+  .palette {
+    >span:nth-child(1){ background: @mand-primary; }
+    >span:nth-child(2){ background: @mand-secondary; }
+    >span:nth-child(3){ background: @mand-white; }
+    >span:nth-child(4){ background: @mand-dark; }
+  }
+}
+
+// CMT
+// --------------------------------------------------
+.cmt {
+  .jumbotron {
+    background-image: url(../images/projects/cmt/guitar.jpg);
+    background-position: center 35%;
+    text-shadow: 0px 1px 2px @gray-darker;
+    &:after {
+      background-color: rgba(0,0,0,0.6);
+    }
   }
 }

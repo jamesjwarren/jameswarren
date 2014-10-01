@@ -1,10 +1,10 @@
 ---
 title: Projects
 ---
-<div id="projects" class="thumb-list">
-  {{#each project }}
+<div id="projects" class="thumb-list row-fluid">
+  {{#withSort project 'posted'}}
     {{#each this.pages}}
       {{> project-item }}
     {{/each}}
-  {{/each}}
+  {{/withSort}}
 </div>
