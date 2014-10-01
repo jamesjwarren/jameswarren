@@ -1,12 +1,12 @@
 <section id="contact">
   <div class="contact-inner">
     <div class="container row-fluid">
-      <div class="col-sm-1 col-sm-offset-1">
+      <div class="col-md-2">
         <h1>Contact</h1>
       </div>
       <div class="col-sm-10">
         <div class="row-fluid">
-          <form role="form">
+          <form role="form" id="contact-form" method="post" name="contact-form">
             <div class="col-sm-4">
               <div class="form-group">
                 <label for="name" class="sr-only">Name</label>
@@ -22,11 +22,13 @@
               </div>
             </div>
             <div class="form-group col-sm-6">
-              <label for="msg" class="sr-only">Message</label>
-              <textarea id="msg" class="form-control" rows="6" placeholder="Message"></textarea>
+              <label for="text" class="sr-only">Message</label>
+              <textarea id="text" class="form-control" rows="6" placeholder="Message"></textarea>
             </div>
             <div class="col-sm-2">
-              <button type="submit" class="btn btn-primary btn-block">Send</button>
+              <button id="submit" type="submit" class="btn btn-primary btn-block">Send</button>
+              <span class="success" style="display:none;">Thanks.</span>
+              <span class="error" style="display:none;">Looks like you've missed something or your email address isn't quite right...</span>
             </div>
           </form>
           <div class="clearfix"></div>
