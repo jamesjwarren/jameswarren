@@ -24,6 +24,8 @@ module.exports = function(grunt) {
         files: { '<%= config.dist %>/assets/js/<%= pkg.name %>.min.js': ['<%= config.src %>/assets/js/**/*.js'] }
       },
       prod: {
+        compress: true,
+        preserveComments: 'some',
         files: { '<%= config.dist %>/assets/js/<%= pkg.name %>.min.js': ['<%= config.src %>/assets/js/**/*.js'] }
       }
     },
@@ -90,8 +92,8 @@ module.exports = function(grunt) {
     },
 
     clean: {
-      dev: ['<%= config.dist %>/**/*.{html,xml}', '<%= config.dist %>/assets/**/*.!(jpg|svg)'],
-      prod: ['<%= config.dist %>/**/*.{html,xml}', '<%= config.dist %>/assets/fonts/**/*.*', '<%= config.dist %>/assets/**/*.!(svg)']
+      dev: ['<%= config.dist %>/**/*.{html,xml}', '<%= config.dist %>/assets/**/*.!(jpg)'],
+      prod: ['<%= config.dist %>/**/*']
     },
 
     copy: {
@@ -120,8 +122,16 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= config.src %>/assets',
-          src: ['**/*.!(coffee|less|svg|js)'],
+          src: ['**/*.!(coffee|less|js)'],
           dest: '<%= config.dist %>/assets/'
+        }]
+      },
+      lib: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.src %>/lib',
+          src: ['**'],
+          dest: '<%= config.dist %>/lib/'
         }]
       }
     },
@@ -154,7 +164,7 @@ module.exports = function(grunt) {
       assets: {
         files: [{
           cwd: '<%= config.src %>/assets/',
-          src: ['**/*.!(coffee|less|svg)'],
+          src: ['**/*.!(coffee|less)'],
           dest: '<%= config.dist %>/assets/'
         }]
       }
@@ -165,9 +175,9 @@ module.exports = function(grunt) {
     svgmin: {
       options: {
         plugins: [
-          { removeViewBox: true },
+          { removeViewBox: false },
           { removeUselessStrokeAndFill: false },
-          { transformsWithOnePath: true },
+          { transformsWithOnePath: false },
           { removeRasterImages: true },
           { removeTitle: true },
           { transformsWithOnePath: true },
@@ -178,9 +188,21 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= config.src %>/assets/images/',
-          src: ['**/*.svg','/*.svg'],
+          src: ['**/*.svg'],
           dest: '<%= config.dist %>/assets/images/'
         }]
+      }
+    },
+
+    // make a distribution zipfile
+    compress: {
+      dist: {
+        options: {
+          archive: 'dist.zip'
+        },
+        files: [
+          {src: ['dist/**'], dest: ''}
+        ]
       }
     }
 
@@ -198,7 +220,8 @@ module.exports = function(grunt) {
     'less:dev',
     'uglify:dev',
     'sync:assets',
-    'copy:components'
+    'copy:components',
+    'copy:lib'
   ]);
 
   grunt.registerTask('compileAssetsProd', [
@@ -206,8 +229,7 @@ module.exports = function(grunt) {
     'less:prod',
 //    'svgmin',
     'uglify:prod',
-    'copy:assets',
-    'copy:components'
+    'copy'
   ]);
 
 
@@ -230,7 +252,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('buildProd', [
 		'compileAssetsProd',
-    'assemble'
+    'assemble',
+    'compress'
 	]);
 
 };
