@@ -6,6 +6,7 @@
 $(document).ready(function () {
 
   $("[data-toggle='popover']").popover({ trigger: 'hover' });
+  $("[data-toggle='tooltip']").tooltip();
 
   var wrapper = '#skills .wrapper',
       targetA = '#ux',
