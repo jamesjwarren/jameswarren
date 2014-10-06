@@ -17,6 +17,7 @@
 article {
   section {
     padding: 20px 60px 80px;
+    overflow: hidden;
 
     // mobile
     @media screen and (max-width: @screen-xs-max) { padding: 20px 30px 80px; }
@@ -49,7 +50,16 @@ article {
         }
       }
     }
-    img { margin-bottom: none; }
+    img {
+      margin-bottom: none;
+      max-width: 100%;
+
+      // showcase images
+      &.showcase {
+        box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
+        margin-top: 30px;
+      }
+    }
 
     &.no-pad-bottom { padding-bottom: 0; }
   }
