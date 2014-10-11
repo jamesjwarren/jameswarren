@@ -228,7 +228,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('assemble');
 
   // Default task(s).
-  grunt.registerTask('default', ['server']);
+  grunt.registerTask('default', ['dev']);
 
 
   grunt.registerTask('compileAssets', [
@@ -254,16 +254,13 @@ module.exports = function(grunt) {
     'sync:assets'
   ]);
 
-  grunt.registerTask('server', [
-    'build',
+  grunt.registerTask('dev', [
+    'compileAssets',
+    'assemble',
     'connect:livereload',
     'watch'
   ]);
 
-  grunt.registerTask('build', [
-		'compileAssets',
-    'assemble'
-	]);
 
   grunt.registerTask('buildProd', [
 		'compileAssetsProd',
