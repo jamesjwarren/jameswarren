@@ -15,7 +15,7 @@ jQuery(document).ready(function(){
     var text = jQuery("#text").val();
     var subject = jQuery("#subject").val();
     // structure input into POST
-    var dataString = 'name=' + name + '&email=' + email + '&subject=' + subject + '&text=' + text;
+    var dataString = 'name=' + name + '&email=' + email + '&subject=' + subject + '&msg=' + text;
 
     // email validation function
     var isValidEmail = function (emailAddress) {
