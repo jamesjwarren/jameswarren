@@ -3,7 +3,13 @@
     <img class="icon" src="assets/images/icons/{{this.icon}}" alt="{{this.icon}}">
   </div>
   <div class="col-sm-8 col-xs-9">
-    <h2>{{this.title}}</h2>
+    <h2>
+        {{#if this.link}}
+        <a href="{{this.link}}" target="_blank">{{this.title}}</a>
+        {{else}}
+        {{this.title}}
+        {{/if}}
+    </h2>
     {{#if this.lead}}
       <h5>{{this.lead}}</h5>
     {{/if}}
