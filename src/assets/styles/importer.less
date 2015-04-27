@@ -1,56 +1,60 @@
+@bootstrap: "../../../bower_components/bootstrap/";
+@bootstrap-less: "@{bootstrap}less/";
+
 // Bootstrap
 // --------------------------------------------------
-@import '../../../bower_components/bootstrap/less/normalize.less';
-@import '../../../bower_components/bootstrap/less/scaffolding.less';
-@import '../../../bower_components/bootstrap/less/grid.less';
-@import '../../../bower_components/bootstrap/less/mixins.less';
-@import '../../../bower_components/bootstrap/less/type.less';
-@import '../../../bower_components/bootstrap/less/print.less';
+@import "@{bootstrap-less}normalize.less";
+@import "@{bootstrap-less}scaffolding.less";
+@import "@{bootstrap-less}grid.less";
+@import "@{bootstrap-less}mixins.less";
+@import "@{bootstrap-less}type.less";
+@import "@{bootstrap-less}print.less";
 
 // Bootstrap: Components
 // --------------------------------------------------
-@import '../../../bower_components/bootstrap/less/buttons.less';
-@import '../../../bower_components/bootstrap/less/navs.less';
-@import '../../../bower_components/bootstrap/less/navbar.less';
-@import '../../../bower_components/bootstrap/less/forms.less';
-@import '../../../bower_components/bootstrap/less/input-groups.less';
-@import '../../../bower_components/bootstrap/less/tooltip.less';
-@import '../../../bower_components/bootstrap/less/popovers.less';
+@import "@{bootstrap-less}buttons.less";
+@import "@{bootstrap-less}navs.less";
+@import "@{bootstrap-less}navbar.less";
+@import "@{bootstrap-less}forms.less";
+@import "@{bootstrap-less}input-groups.less";
+@import "@{bootstrap-less}tooltip.less";
+@import "@{bootstrap-less}popovers.less";
 
 // Bootstrap: Utilities
 // --------------------------------------------------
-@import '../../../bower_components/bootstrap/less/utilities.less';
-@import '../../../bower_components/bootstrap/less/responsive-utilities.less';
+@import "@{bootstrap-less}utilities.less";
+@import "@{bootstrap-less}responsive-utilities.less";
 
 // Custom
 // --------------------------------------------------
-@import 'variables.less';
-@import 'mixins.less';
-@import 'typography.less';
+@import "variables.less";
+@import "mixins.less";
+@import "typography.less";
 
 // Components
 // --------------------------------------------------
-@import 'components/navbar.less';
-@import 'components/jumbotron.less';
-@import 'components/thumb-list.less';
-@import 'components/forms.less';
-@import 'components/strip.less';
-@import 'components/buttons.less';
-@import 'components/timeline.less';
-@import 'components/labels.less';
-@import 'components/icons.less';
-@import 'components/charts.less';
-@import 'components/lists.less';
-@import 'components/box.less';
-@import 'components/footer.less';
+@import "components/navbar.less";
+@import "components/jumbotron.less";
+@import "components/thumb-list.less";
+@import "components/forms.less";
+@import "components/strip.less";
+@import "components/buttons.less";
+@import "components/timeline.less";
+@import "components/labels.less";
+@import "components/icons.less";
+@import "components/charts.less";
+@import "components/lists.less";
+@import "components/box.less";
+@import "components/footer.less";
 
 // Individual styling for sections
 // --------------------------------------------------
-@import 'sections/contact.less';
-@import 'sections/skills.less';
-@import 'sections/projects.less';
+@import "sections/contact.less";
+@import "sections/skills.less";
+@import "sections/projects.less";
+
 
 .container-fluid {
-  padding-left: 0px;
-  padding-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }

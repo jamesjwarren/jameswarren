@@ -2,42 +2,42 @@
 // Component: Navbar
 // --------------------------------------------------
 .nav > li {
-  display: inline-block;
+    display: inline-block;
 }
 
 nav.navbar {
-  border: none;
-  font-size: @font-size-h4;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-
-  .navbar-nav {
-    float: right;
-    margin-right: 65px;
-  }
-
-  .navbar-nav a, .navbar-brand {
-//    padding-top: 14px;
-//    padding-bottom: 14px;
-  }
-
-  .navbar-brand {
+    border: none;
     font-size: @font-size-h4;
-    padding: 14px 30px;
-  }
+    letter-spacing: 1px;
+    text-transform: uppercase;
 
-  .separator {
-    background: @brand-primary;
-    width: 5px;
-    height: 5px;
-    transform: rotate(45deg);
-    margin: 22px 10px;
-  }
-
-  @media (max-width: @screen-xs-max) {
     .navbar-nav {
-      float: none; margin-right: 0; text-align: center;
+        float: right;
+        margin-right: 65px;
     }
-    .separator { margin: 0px 5px; }
-  }
+
+    .navbar-nav a, .navbar-brand {
+        //    padding-top: 14px;
+        //    padding-bottom: 14px;
+    }
+
+    .navbar-brand {
+        font-size: @font-size-h4;
+        padding: 14px 30px;
+    }
+
+    .separator {
+        background: @brand-primary;
+        width: 5px;
+        height: 5px;
+        transform: rotate(45deg);
+        margin: 22px 10px;
+    }
+
+    @media (max-width: @screen-xs-max) {
+        .navbar-nav {
+            float: none; margin-right: 0; text-align: center;
+        }
+        .separator { margin: 0px 5px; }
+    }
 }

@@ -3,20 +3,20 @@
 // --------------------------------------------------
 
 .strip {
-  background: @gray-lighter;
-  border-bottom: 2px solid @gray-lighter;
-  color: @brand-dark;
-  text-align: center;
-  width: 100%;
-
-  a {
-    &:extend(h4 all);
-    display: inline-block;
-    .transition(background 0.3s);
-    &:focus, &:hover { background: @brand-primary; }
-    width: 100%;
-    height: 100%;
-    margin: auto;
+    background: @gray-lighter;
+    border-bottom: 2px solid @gray-lighter;
     color: @brand-dark;
-  }
+    text-align: center;
+    width: 100%;
+
+    a {
+        &:extend(h4 all);
+        display: inline-block;
+        .transition(background 0.3s);
+        &:focus, &:hover { background: @brand-primary; }
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        color: @brand-dark;
+    }
 }

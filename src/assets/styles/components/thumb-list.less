@@ -4,109 +4,109 @@
 
 .thumb-list {
 
-  .row-fluid {
-    position: relative;
-    overflow: hidden;
+    .row-fluid {
+        position: relative;
+        overflow: hidden;
 
-    &:hover {
-      .thumb img { #filter.grayscale-reset(); }
-    }
-  }
-
-  .thumb {
-
-    padding: 0;
-
-    @media (min-width: @screen-sm-min) {
-      position: absolute;
-      height: 100%;
-      top: 0;
+        &:hover {
+            .thumb img { #filter.grayscale-reset(); }
+        }
     }
 
-    .img-container {
-      // to help vertical alignment of imgs
-      position: relative;
-      top: 50%;
-      img { max-width: 120%; }
-    }
-
-    img {
-      .transition(~"filter 0.6s, -webkit-filter 0.6s");
-      #filter.grayscale();
-
-      // fill width and vertical align
-      position: relative;
-      .translateY(-50%);
-    }
-  }
-
-  h5 { border-bottom: @trans-light 1px dashed; padding-bottom: 10px; }
-
-  .details {
-    position: relative;
-    padding: 50px 60px;
-    z-index: 100;
-    @media screen and (min-height: @screen-sm-min) { min-height: 250px; }
-
-    // side arrow
-    &:after {
-      position: absolute;
-      top: 50%;
-      top: calc(50% - 8px);
-      width: 0;
-      height: 0;
-      display: block;
-      content: " ";
-      border-color: transparent;
-      border-style: solid solid outset;
-      pointer-events: none;
-      border-width: 16px;
-    }
-
-    @media (min-height: 700px) {
-      min-height: 400px;
-    }
-  }
-
-  div:nth-child(odd) {
-    .details {
-      &:extend(.box-dark all);
-      .box-arrow-right(dark);
-    }
-    &:hover .details{
-      .box-color();
-      .box-arrow-right(color);
-    }
     .thumb {
-      right: 0;
-      text-align: left;
-    }
-  }
 
-  div:nth-child(even) {
-    .details {
-      &:extend(.box-dark all);
-      .box-arrow-left(dark);
-      float: right;
-    }
-    &:hover .details {
-      .box-color();
-      .box-arrow-left(color);
-    }
-    .thumb {
-      left: 0;
-      text-align: right;
-    }
-  }
+        padding: 0;
 
-  // mobile
-  @media (max-width: @screen-xs-max) {
-    .thumb { height: 150px; }
-    .details {
-      padding: 15px;
-      h2 { float: left; }
-      h5 { padding: 0; border: none; margin: 0; clear: both; }
-      .label-trans { float: right; }
+        @media (min-width: @screen-sm-min) {
+            position: absolute;
+            height: 100%;
+            top: 0;
+        }
+
+        .img-container {
+            // to help vertical alignment of imgs
+            position: relative;
+            top: 50%;
+            img { max-width: 120%; }
+        }
+
+        img {
+            .transition(~"filter 0.6s, -webkit-filter 0.6s");
+            #filter.grayscale();
+
+            // fill width and vertical align
+            position: relative;
+            .translateY(-50%);
+        }
     }
-  }
+
+    h5 { border-bottom: @trans-light 1px dashed; padding-bottom: 10px; }
+
+    .details {
+        position: relative;
+        padding: 50px 60px;
+        z-index: 100;
+        @media screen and (min-height: @screen-sm-min) { min-height: 250px; }
+
+        // side arrow
+        &:after {
+            position: absolute;
+            top: 50%;
+            top: calc(50% - 8px);
+            width: 0;
+            height: 0;
+            display: block;
+            content: " ";
+            border-color: transparent;
+            border-style: solid solid outset;
+            pointer-events: none;
+            border-width: 16px;
+        }
+
+        @media (min-height: 700px) {
+            min-height: 400px;
+        }
+    }
+
+    div:nth-child(odd) {
+        .details {
+            &:extend(.box-dark all);
+            .box-arrow-right(dark);
+        }
+        &:hover .details{
+            .box-color();
+            .box-arrow-right(color);
+        }
+        .thumb {
+            right: 0;
+            text-align: left;
+        }
+    }
+
+    div:nth-child(even) {
+        .details {
+            &:extend(.box-dark all);
+            .box-arrow-left(dark);
+            float: right;
+        }
+        &:hover .details {
+            .box-color();
+            .box-arrow-left(color);
+        }
+        .thumb {
+            left: 0;
+            text-align: right;
+        }
+    }
+
+    // mobile
+    @media (max-width: @screen-xs-max) {
+        .thumb { height: 150px; }
+        .details {
+            padding: 15px;
+            h2 { float: left; }
+            h5 { padding: 0; border: none; margin: 0; clear: both; }
+            .label-trans { float: right; }
+        }
+    }
 }

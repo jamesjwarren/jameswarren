@@ -3,53 +3,53 @@
 // --------------------------------------------------
 
 .chart {
-  position: relative;
-
-  .bar-group {
-    float: left;
     position: relative;
-    width: 10%;
-  }
 
-  .label {
-    text-align: left;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    transform: rotate(90deg);
-    margin-top: 35px;
-
-    @media screen and (min-width: @screen-xl-min) { margin-top: 0; transform: none; text-align: center; }
-  }
-
-  .bar-container {
-    position: relative;
-    height: 120px;
-    border-top: 1px dashed @trans-light;
-    border-bottom: 1px dashed @trans-light;
-    z-index: 0;
-  }
-
-  .bar {
-      position: absolute;
-      background: @trans-light;
-      .transition(height 1s ease-in-out);
-      height: 0%;
-      margin: 0 25%;
-      z-index: 500;
-      bottom: 0;
-      width: 50%;
+    .bar-group {
+        float: left;
+        position: relative;
+        width: 10%;
     }
 
-  hr {
-    height: 25%;
-    margin: 0;
-    border-top: none;
-    border-bottom: 1px dashed @trans-light;
-    z-index: 0;
-  }
+    .label {
+        text-align: left;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        transform: rotate(90deg);
+        margin-top: 35px;
 
-  @media screen and (min-height: @screen-v2-min) {
-    .bar-container { height: 150px; }
-  }
+        @media screen and (min-width: @screen-xl-min) { margin-top: 0; transform: none; text-align: center; }
+    }
+
+    .bar-container {
+        position: relative;
+        height: 120px;
+        border-top: 1px dashed @trans-light;
+        border-bottom: 1px dashed @trans-light;
+        z-index: 0;
+    }
+
+    .bar {
+        position: absolute;
+        background: @trans-light;
+        .transition(height 1s ease-in-out);
+        height: 0%;
+        margin: 0 25%;
+        z-index: 500;
+        bottom: 0;
+        width: 50%;
+    }
+
+    hr {
+        height: 25%;
+        margin: 0;
+        border-top: none;
+        border-bottom: 1px dashed @trans-light;
+        z-index: 0;
+    }
+
+    @media screen and (min-height: @screen-v2-min) {
+        .bar-container { height: 150px; }
+    }
 }

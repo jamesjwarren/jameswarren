@@ -3,60 +3,60 @@
 // --------------------------------------------------
 
 img.icon {
-  margin-right: 10px;
-  margin-bottom: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 
-  @media (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
-    margin-right: 6px;
-  }
+    @media (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
+        margin-right: 6px;
+    }
 
-  max-width: 72px;
+    max-width: 72px;
 }
 
 .icon-label {
-  vertical-align: text-bottom;
-  &:extend(h5);
-  font-size: 0.9em;
-  a & {
-    color: @white;
-    &:extend(a);
-  }
-  a:hover & { color: @brand-primary; }
+    vertical-align: text-bottom;
+    &:extend(h5);
+    font-size: 0.9em;
+    a & {
+        color: @white;
+        &:extend(a);
+    }
+    a:hover & { color: @brand-primary; }
 }
 
 .align-right {
-  text-align: right;
+    text-align: right;
 
-  @media (max-width: @screen-xs-max) {
-    text-align: left;
-  }
+    @media (max-width: @screen-xs-max) {
+        text-align: left;
+    }
 }
 
 .icon-group {
-  float: left;
-  text-align: center;
-  margin: 0 30px;
+    float: left;
+    text-align: center;
+    margin: 0 30px;
 
-  @media screen and (max-width: @screen-md-max) { margin: 0 10px; }
+    @media screen and (max-width: @screen-md-max) { margin: 0 10px; }
 
-  img.icon { display: inline-block; margin-right: 0; }
-  .icon-label { display: block; }
+    img.icon { display: inline-block; margin-right: 0; }
+    .icon-label { display: block; }
 }
 
 // justify aligned icon group
 .icon-group-justify {
-  text-align: justify;
-  padding: 0 30px;
+    text-align: justify;
+    padding: 0 30px;
 
-  // mobile
-  @media screen and (max-width: @screen-xs-max) { padding: 0 (@grid-gutter-width / 2); }
+    // mobile
+    @media screen and (max-width: @screen-xs-max) { padding: 0 (@grid-gutter-width / 2); }
 
-  .icon { margin-right: 0; }
+    .icon { margin-right: 0; }
 
-  .justifier {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    height: 0;
-  }
+    .justifier {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: 0;
+    }
 }

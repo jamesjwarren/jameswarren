@@ -1,66 +1,60 @@
 {
-  "dev": {
-    "title": "Web Developer",
-    "desc": "I’m a <em>Web Developer</em> based in London, with a focus on <em>front-end</em> technologies. I design and build responsive websites and applications. I enjoy working collaboratively with clients to craft unique products that deliver great user experiences. I'm currently on the look out for exciting new projects to work on (part/full time or contractual), if you like my work or just fancy a chat... <a href='/#contact' class='hashnav'>get in touch</a>.",
-    "skills": [
-      {
-        "label": "HTML5",
-        "percent": "100"
-      },
-      {
-        "label": "CSS/LESS",
-        "percent": "100"
-      },
-      {
-        "label": "JavaScript",
-        "percent": "75"
-      },
-      {
-        "label": "jQuery",
-        "percent": "75"
-      },
-      {
-        "label": "Angular.js",
-        "percent": "75"
-      },
-      {
-        "label": "Node.js",
-        "percent": "50"
-      },
-      {
-        "label": "Sails.js",
-        "percent": "50"
-      },
-      {
-        "label": "PHP",
-        "percent": "25"
-      },
-      {
-        "label": "MySQL",
-        "percent": "50"
-      }
-    ],
-    "tools": ["Git","Bootstrap","Grunt","Bower","AngularUI","Illustrator","Linux","SSH","Vagrant","Chef","AWS"]
-  },
-  "ux": {
-    "title": "UX Enthusiast",
-    "desc": "I design web user experiences. From the planning stages to the interface design and implementation, the end-user is at the heart of my process.",
-    "process": [{
-      "img": "document.svg",
-      "label": "UX Strategy",
-      "num": "1"
-    },{
-      "img": "wireframe.svg",
-      "label": "Wireframing",
-      "num": "2"
-    },{
-      "img": "screen.svg",
-      "label": "Mockup",
-      "num": "3"
-    },{
-      "img": "screen-code.svg",
-      "label": "Development",
-      "num": "4"
-    }]
-  }
+    "dev": {
+        "title": "Web Developer",
+        "desc": "I’m a <em>Web Developer</em> based in London, with a focus on <em>front-end</em> technologies. I design and build responsive websites and applications. I enjoy working collaboratively with clients to craft unique products that deliver great user experiences. I'm currently on the look out for exciting new projects to work on (part/full time or contractual), if you like my work or just fancy a chat... <a href='/#contact' class='hashnav'>get in touch</a>.",
+        "skills": [
+            {
+                "label": "HTML5",
+                "percent": "100"
+            },{
+                "label": "CSS/LESS",
+                "percent": "100"
+            },{
+                "label": "JavaScript",
+                "percent": "75"
+            },{
+                "label": "jQuery",
+                "percent": "75"
+            },{
+                "label": "Angular.js",
+                "percent": "75"
+            },{
+                "label": "Node.js",
+                "percent": "50"
+            },{
+                "label": "Sails.js",
+                "percent": "50"
+            },{
+                "label": "PHP",
+                "percent": "25"
+            },{
+                "label": "MySQL",
+                "percent": "50"
+            }
+        ],
+        "tools": ["Git","Bootstrap","Grunt","Bower","AngularUI","Illustrator","Linux","SSH","Vagrant","Chef","AWS"]
+    },
+    "ux": {
+        "title": "UX Enthusiast",
+        "desc": "I design web user experiences. From the planning stages to the interface design and implementation, the end-user is at the heart of my process.",
+        "process": [
+            {
+                "img": "document.svg",
+                "label": "UX Strategy",
+                "num": "1"
+            },{
+                "img": "wireframe.svg",
+                "label": "Wireframing",
+                "num": "2"
+            },{
+                "img": "screen.svg",
+                "label": "Mockup",
+                "num": "3"
+            },{
+                "img": "screen-code.svg",
+                "label": "Development",
+                "num": "4"
+            }
+        ]
+    }
 }

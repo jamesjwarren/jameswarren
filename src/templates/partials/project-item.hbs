@@ -1,23 +1,23 @@
 <div class="row-fluid">
-  <a href="projects/{{ basename }}.html">
-  <div class="col-sm-5 col-xs-12 details">
-    <h2>{{ data.title }}</h2>
-    {{#if data.status }}
-      <span class="label-trans hidden-sm hidden-md hidden-lg">{{ data.status }}</span>
-    {{/if}}
-    <h5>
-      {{ data.subtitle }}
-    </h5>
-    <p class="hidden-xs">{{ data.summary }}</p>
-    {{#if data.status }}
-      <span class="label-trans hidden-xs">{{ data.status }}</span>
-    {{/if}}
-  </div>
-  <div class="col-sm-7 col-xs-12 thumb">
-    <div class="img-container">
-      <img src="{{assets}}/images/projects/{{basename}}/{{ data.thumb }}" alt="{{ data.title }}">
-    </div>
-  </div>
-  </a>
-  <div class="clearfix"></div>
+    <a href="projects/{{ basename }}.html">
+        <div class="col-sm-5 col-xs-12 details">
+            <h2>{{ data.title }}</h2>
+            {{#if data.status }}
+            <span class="label-trans hidden-sm hidden-md hidden-lg">{{ data.status }}</span>
+            {{/if}}
+            <h5>
+                {{ data.subtitle }}
+            </h5>
+            <p class="hidden-xs">{{ data.summary }}</p>
+            {{#if data.status }}
+            <span class="label-trans hidden-xs">{{ data.status }}</span>
+            {{/if}}
+        </div>
+        <div class="col-sm-7 col-xs-12 thumb">
+            <div class="img-container">
+                <img src="{{assets}}/images/projects/{{basename}}/{{ data.thumb }}" alt="{{ data.title }}">
+            </div>
+        </div>
+    </a>
+    <div class="clearfix"></div>
 </div>

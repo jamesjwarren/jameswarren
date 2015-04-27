@@ -3,32 +3,32 @@
 // --------------------------------------------------
 
 .translateY(@y) {
-  -webkit-transform: translateY(@y);
-      -ms-transform: translateY(@y); // IE9 only
-       -o-transform: translateY(@y);
-          transform: translateY(@y);
+    -webkit-transform: translateY(@y);
+    -ms-transform: translateY(@y); // IE9 only
+    -o-transform: translateY(@y);
+    transform: translateY(@y);
 
-  -webkit-transform-style: preserve-3d;
-      -ms-transform-style: preserve-3d;
-       -o-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 // Img Filters
 #filter {
-  .all(@filter){
-    -webkit-filter: @filter;
-    -mox-filter: @filter;
-    filter: @filter;
-  }
-  .grayscale(){
-    -moz-filter: grayscale(40%);
-    -webkit-filter: grayscale(40%);
-    filter: grayscale(40%);
-  }
-  .grayscale-reset(){
-    -moz-filter: grayscale(0%);
-    -webkit-filter: grayscale(0%);
-    filter: none;
-  }
+    .all(@filter){
+        -webkit-filter: @filter;
+        -mox-filter: @filter;
+        filter: @filter;
+    }
+    .grayscale(){
+        -moz-filter: grayscale(40%);
+        -webkit-filter: grayscale(40%);
+        filter: grayscale(40%);
+    }
+    .grayscale-reset(){
+        -moz-filter: grayscale(0%);
+        -webkit-filter: grayscale(0%);
+        filter: none;
+    }
 }

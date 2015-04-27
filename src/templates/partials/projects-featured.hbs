@@ -1,17 +1,17 @@
 <section id="projects">
-  <div class="strip">
-    <h4>Recent Projects</h4>
-  </div>
-  <div class="thumb-list">
-    {{#each project }}
-      {{#each this.pages }}
+    <div class="strip">
+        <h4>Recent Projects</h4>
+    </div>
+    <div class="thumb-list">
+        {{#each project }}
+        {{#each this.pages }}
         {{#is data.featured true }}
-          {{> project-item }}
+        {{> project-item }}
         {{/is }}
-      {{/each }}
-    {{/each }}
-  </div>
-  <div class="strip">
-    <a href="projects.html"><img class="icon" width="24" height="24" src="{{assets}}/images/icons/plus.svg" alt="Plus">See More Projects</a>
-  </div>
+        {{/each }}
+        {{/each }}
+    </div>
+    <div class="strip">
+        <a href="projects.html"><img class="icon" width="24" height="24" src="{{assets}}/images/icons/plus.svg" alt="Plus">See More Projects</a>
+    </div>
 </section>
