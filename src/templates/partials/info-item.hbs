@@ -10,10 +10,51 @@
             {{this.title}}
             {{/if}}
         </h2>
+        
         {{#if this.lead}}
         <h5>{{this.lead}}</h5>
         {{/if}}
-        {{{this.content}}}
+        
+        {{#each this.text}}
+        <p>
+            {{this}}
+        </p>
+        {{/each}}
+        
+        {{#if this.projects}}
+        <ul>
+        {{#each this.projects}}
+            <li>
+                <a href="{{ this.link }}">{{ this.name }}</a><br>
+                <p>
+                    {{ this.description }}
+                </p>
+                {{#if this.award}}
+                <img class="icon" src="assets/images/icons/star.svg" alt="Star" width="24" height="24">
+                Awarded the <a href="{{ this.award.link }}" target="_blank">
+                    {{ this.award.title }}
+                </a>
+                {{/if}}
+            </li>
+        {{/each}}
+        </ul>
+        {{/if}}
+        
+        {{#if this.skills}}
+        <ul>
+        {{#each this.skills}}
+            <li>{{ this }}</li>
+        {{/each}}
+        </ul>
+        {{/if}}
+        
+        {{#if this.award}}
+        <p>
+            <img class="icon" src="assets/images/icons/star.svg" alt="Star" width="24" height="24">
+            {{ this.award }}
+        </p>
+        {{/if}}
+        
     </div>
     <div class="clearfix"></div>
 </div>
