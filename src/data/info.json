@@ -63,11 +63,11 @@
             ],
             "skills": [
                 "Consulting with clients to help them understand their web requirements",
-                "Producing wireframes and user flows",
+                "Designing user flows and wireframing",
                 "Website design",
-                "Building responsive websites using HTML, CSS, Bootstrap and jQuery. Integrated with Joomla CMS (PHP/MySQL)",
-                "Undertaken training in Node.js, Angular.js, and UX techniques",
-                "Linux server administration; managed hosting service",
+                "Building responsive websites using HTML, CSS, Bootstrap and Javascript. Integrated with Joomla CMS (PHP/MySQL)",
+                "Developing in-house projects; using Node.js for RESTful and realtime socket back-ends, with Angular.js based front-ends",
+                "Linux server administration for a managed hosting service",
                 "Setup and management of cloud storage service"
             ]
         },{
@@ -76,7 +76,8 @@
             "lead": "University of Hertfordshire (2010 - 2013)",
             "text": [
                 "I undertook a major technology project to design and build an interactive performace controller for electric guitarists.",
-                "The aim was to enable guitarists to interact with their instrument’s sound in unique and intuitive ways. I wanted to challenge the inflexibities in traditional guitar systems, which offer limited real-time control of effects processing."
+                "The aim was to enable guitarists to interact with their instrument’s sound in unique and intuitive ways. I wanted to challenge the inflexibities in traditional guitar systems, which offer limited real-time control of effects processing.",
+                "I prototyped the interface using Arduino and MaxMSP."
             ],
             "award": "University Prize Winner"
         }
@@ -91,7 +92,9 @@
         },{
             "title": "Music",
             "icon": "music.svg",
-            "text": ["I’ve played guitar from an early age. I enjoy getting invloved in live music events. Currently I help run Discovery2’s emerging talent showcase."]
+            "text": [
+                "I have a passion for music. Pairing that with my passion for technology, I love to experiment with music performance technologies."
+            ]
         }
     ]
 }
