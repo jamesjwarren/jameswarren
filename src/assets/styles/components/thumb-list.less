@@ -9,12 +9,13 @@
         overflow: hidden;
 
         &:hover {
-            .thumb img { #filter.grayscale-reset(); }
+            .thumb img { 
+                #filter.grayscale-reset();
+            }
         }
     }
 
     .thumb {
-
         padding: 0;
 
         @media (min-width: @screen-sm-min) {
@@ -40,13 +41,19 @@
         }
     }
 
-    h5 { border-bottom: @trans-light 1px dashed; padding-bottom: 10px; }
+    h5 { 
+        border-bottom: @trans-light 1px dashed; 
+        padding-bottom: 10px; 
+    }
 
     .details {
         position: relative;
-        padding: 50px 60px;
+        padding: 80px 60px;
         z-index: 100;
-        @media screen and (min-height: @screen-sm-min) { min-height: 250px; }
+        
+        @media screen and (min-height: @screen-sm-min) { 
+            min-height: 250px; 
+        }
 
         // side arrow
         &:after {
@@ -74,8 +81,8 @@
             .box-arrow-right(dark);
         }
         &:hover .details{
-            .box-color();
-            .box-arrow-right(color);
+//            .box-color();
+//            .box-arrow-right(color);
         }
         .thumb {
             right: 0;
@@ -90,8 +97,8 @@
             float: right;
         }
         &:hover .details {
-            .box-color();
-            .box-arrow-left(color);
+//            .box-color();
+//            .box-arrow-left(color);
         }
         .thumb {
             left: 0;
@@ -101,12 +108,27 @@
 
     // mobile
     @media (max-width: @screen-xs-max) {
-        .thumb { height: 150px; }
+        .thumb { 
+            height: 150px;
+        }
+        
         .details {
             padding: 15px;
-            h2 { float: left; }
-            h5 { padding: 0; border: none; margin: 0; clear: both; }
-            .label-trans { float: right; }
+            
+            h2 { 
+                float: left; 
+            }
+            
+            h5 { 
+                padding: 0; 
+                border: none; 
+                margin: 0; 
+                clear: both; 
+            }
+            
+            .label-trans { 
+                float: right; 
+            }
         }
     }
 }
